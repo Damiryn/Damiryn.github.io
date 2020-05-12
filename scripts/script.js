@@ -1,4 +1,4 @@
-/* console.log ("Hello")
+ console.log ("Hello")
 document.write("Bye")
 
 let func = function(str, name) {
@@ -22,7 +22,7 @@ function result (){
 	else {
 		console.log ("Miss");
 	}
-} */
+} 
 let def = 0;
 let isDec = false;
 
@@ -59,4 +59,13 @@ function check (num) {
 				dec (num);
 			}
 	}
+} 
+
+
+let item = 0;
+
+while (item < 5) {
+	$ ('#itemlist').append(`<li>${item}</li>`);
+	console.log (item);
+	item++;
 }
