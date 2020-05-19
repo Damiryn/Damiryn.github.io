@@ -8,7 +8,23 @@
 </head>
 <body>
 <div class="fix">
-	<h1>Заговок</h1>
+
+	<div class="header">
+		<div class="menu">
+		<a href=""><span>Главная</span></a>
+		<a href=""><span>Новости</span></a>
+		<a href=""><span>Музыка</span></a>
+		<a href=""><span>Картинки</span></a>
+		<a href=""><span>Контакты</span></a>
+		</div>	
+			<div>
+			<button onclick="addHeader()">Добавить</button>
+			</div>
+		
+	</div>
+
+	<div class="contnt">
+			<h1>Заговок</h1>
 		<div class="img">
 			<img src="./image/Zom.jpg">
 			<p>Text text text</p>
@@ -27,15 +43,18 @@
 			<button onclick="inc(def)"> Увеличить </button>
 			<button onclick="dec(def)"> Уменьшить </button>
 			<button onclick="check(def)"> ПРОВЕРКА </button>
-			<button onclick="result ()"> Просто кнопка</button>
+			<button onclick="result()"> Просто кнопка</button>
 			<input value="А тут пингвины" type="button" onclick=location.href="./image/Peng.jpg">
+			<button onclick="list()">AddList</button>
 		</div>
-</div>
 
-		<ul id="itemlist">
+			<ul id="itemlist">
 			
-		</ul>
+			</ul>
+	</div>
 
+	<dir class="footer"></dir>
 
+</div>
 </body>
 </html>

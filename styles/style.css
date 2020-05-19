@@ -1,5 +1,5 @@
 body{
-	background: url("../image/bigfon.jpg");
+	background: url("../image/bigfon.jpg"); 
 	background-size: cover;
 	color: #000;
 }
@@ -10,7 +10,7 @@ body{
 }*/
 
 .fix{
-	width: 1500px;
+	width: 1000px;
 	margin: 0 auto;
 
 }
@@ -20,15 +20,52 @@ body{
 	float: left;
 }*/
 
+
+.header{
+	text-align: left;
+
+}
+.header span {
+	text-align: center;
+	border: 1px solid blue;
+	background-color: #00ffff;
+	color: black;
+	padding: 5px;
+}
+
+.header button {
+	text-align: center;
+	border: 1px solid blue;
+	background-color: #00ffff;
+	color: black;
+	padding: 7px;
+	margin: 10px 0px;
+}
+
 .text{
 	font-size: 20px;
-	
 	vertical-align: top;
 }
 
 .button{
-	text-align: center;
 	font-size: 100px;
-	float: right;
+}
 
+#itemlist {
+	color: yellow;
+	font-weight: bold;
+}
+
+.itemList {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.target{
+	cursor: pointer;
+}
+
+.dilete{
+	margin: 0;
 }
