@@ -10,25 +10,31 @@
 <div class="fix">
 
 	<div class="header">
-		<div class="menu">
-		<a href=""><span>Главная</span></a>
-		<a href=""><span>Новости</span></a>
-		<a href=""><span>Музыка</span></a>
-		<a href=""><span>Картинки</span></a>
-		<a href=""><span>Контакты</span></a>
-		</div>	
-			<div>
-			<button onclick="addHeader()">Добавить</button>
+		<div class="fixmenu">
+			<div class="menu" id="menuLinks">
+				<a href="">Главная</a>
+				<a href="">Новости</a>
+				<a href="">Музыка</a>
+				<a href="">Картинки</a>
+				<a href="">Контакты</a>
 			</div>
-		
+			<div class="avatar">
+				<a href="">Аватар</a>
+			</div>	
+		</div>	
+			<div class="downmenu">
+				<button onclick="addHeader()">Добавить</button>
+			</div>
 	</div>
 
-	<div class="contnt">
+	<div class="content">
 			<h1>Заговок</h1>
 		<div class="img">
 			<img src="./image/Zom.jpg">
 			<p>Text text text</p>
 		</div>
+
+
 		<div class="text">
 			<p>Здесь должн быть текст, много текста, но его не будет так как:</p>
 			<ul>
@@ -36,15 +42,15 @@
 				<li>нет опыта</li>
 				<li>нет <b>Кекса</b></li>
 			</ul>
-			<p>Вот так! А теперь к кнопкам.</p>
 		</div>
-<!--Все кнопки взял из интернета(( -->
+
+			
 		<div class="button">
+			<p>Вот так! А теперь к кнопкам.</p>
 			<button onclick="inc(def)"> Увеличить </button>
 			<button onclick="dec(def)"> Уменьшить </button>
 			<button onclick="check(def)"> ПРОВЕРКА </button>
 			<button onclick="result()"> Просто кнопка</button>
-			<input value="А тут пингвины" type="button" onclick=location.href="./image/Peng.jpg">
 			<button onclick="list()">AddList</button>
 		</div>
 
@@ -53,7 +59,7 @@
 			</ul>
 	</div>
 
-	<dir class="footer"></dir>
+	<dir class="footer">Подвал</dir>
 
 </div>
 </body>

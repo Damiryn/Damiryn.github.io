@@ -94,12 +94,12 @@ function list (){
 function addHeader (){
 	let textHader = prompt('Название заголовка?');
 	let header = `
-			<a>
-			<span class="addMenu">${textHader}</span>
+			<span>
+			<a class="addMenu">${textHader}</a>
 			<button class="dilete" onclick="dellist(this.parentNode)">Удалить</button>
-			</a>`;
+			</span>`;
 
-	$('.menu').append(header);
+	$('.downmenu').append(header);
 }
 
 function dellist (element){
@@ -161,24 +161,97 @@ console.log (custom);
 
 // Zadacha
 
-const rate_tax=0.1;
-const rate_tel=100;
-const rate_acc=10;
-const bank_balans=300;
-
-let stel= 0;
 
 function SummaTell() {
 
-	stel = rate_tel + rate_acc + (rate_tel * rate_tax);
-	console.log (stel);
-	return stel;
+const rate_tax = 0.1;
+const rate_tel = 100;
+const rate_acc = 10;
+const bank_balans = 500;
+
+let tell = 0;
+let	stel = 0;
+		
+		stel = rate_acc + rate_tel + (rate_tel * rate_tax);
+		console.log (stel);
+		
+
+		while (tell < bank_balans) {
+				console.log ('Yes, buy!');
+				tell = tell + stel;
+			    console.log (tell);
+        if (tell > bank_balans){
+				console.log ('No balans');
+		
+			};	
+
+		};
+
 	
 };
-/*
 
-for (stel = 0; stel < bank_balans; stel = stel + stel) {
-			if (stel < bank_balans)
-			console.log ('Yes');
-			break;
+SummaTell ();
+
+/*	function SummaTell() {
+
+const rate_tax = 0.1;
+const rate_tel = 100;
+const rate_acc = 10;
+const bank_balans = 500;
+
+let tell = 0;
+
+	let	stel = rate_acc + rate_tel + (rate_tel * rate_tax);
+		console.log (stel);
+		
+
+		while (tell < bank_balans) {
+				console.log ('Yes, buy!');
+				tell = bank_balans - stel;
+			    console.log (tell);
+                
+        if (tell > bank_balans){
+				console.log ('No balans');
+		
+			};	
+
+		};
+return tell;
+	
+};
+
+SummaTell ();
+
+		if (stel > bank_balans){
+				console.log ('No balans');
+				};	
+
+	for (let stel = 0; stel < bank_balans; stel = stel + stel){
+			if (stel < bank_balans){
+						
+			} else {
+				
+			}
 		};*/
+
+let menuLinks = [
+	'Home',
+	'Media',
+	'Contancs',
+	'Follow',
+];
+
+function generateMenuLinks (){
+	let html = '';
+
+	for (const items of menuLinks){
+		html += `<a href="#">${items}</a>`;
+	}
+ 	return html;
+
+}
+
+$(function(){
+	
+	$('#menuLinks').append(generateMenuLinks ());
+});
