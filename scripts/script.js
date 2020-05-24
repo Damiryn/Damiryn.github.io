@@ -162,35 +162,53 @@ console.log (custom);
 // Zadacha
 
 
+
+
+
 function SummaTell() {
 
 const rate_tax = 0.1;
-const rate_tel = 100;
-const rate_acc = 10;
-const bank_balans = 500;
+let bank_balans = $('#bank_balans').val();
+let rate_tel = $('#rate_tel').val();
+let rate_acc = $('#rate_acc').val();
 
-let tell = 0;
-let	stel = 0;
-		
-		stel = rate_acc + rate_tel + (rate_tel * rate_tax);
-		console.log (stel);
-		
+rate_tel = Number(rate_tel);
+rate_acc = Number(rate_acc);
 
-		while (tell < bank_balans) {
-				console.log ('Yes, buy!');
-				tell = tell + stel;
-			    console.log (tell);
-        if (tell > bank_balans){
-				console.log ('No balans');
+let SumMyPorchases = 0;
+let	SumTel = 0;
+let SumAcc = 0;
 		
+		
+	SumTel = rate_tel + (rate_tel * rate_tax);
+		console.log (SumTel, 'Стоимость телефона');
+	SumAcc = rate_acc + (rate_acc * rate_tax);
+		console.log (SumAcc, 'Стоимость Аасессуара');
+
+		while (SumMyPorchases < (bank_balans - SumTel)) {
+					console.log ('Yes, buy!');
+				SumMyPorchases = SumMyPorchases + SumTel;
+			    	console.log (SumMyPorchases, 'Сумма покупки');
+			
+			if ((SumMyPorchases + SumAcc) < bank_balans){
+				SumMyPorchases = SumMyPorchases + SumAcc;
+					console.log (SumMyPorchases, 'Можно добавить акк');
+			}else{
+				console.log (SumMyPorchases, 'На акк не хватило');
+			}
+     	};
+
+     	    if ((SumMyPorchases + SumTel) > bank_balans){
+				console.log (SumMyPorchases, 'No balans');
 			};	
 
-		};
+	$('#Telephone').append('Общая сумма покупки = ',SumMyPorchases);
 
-	
 };
 
-SummaTell ();
+	//$('#Telephone').html(SummaTell ());
+
+
 
 /*	function SummaTell() {
 
@@ -251,7 +269,47 @@ function generateMenuLinks (){
 
 }
 
+let user = '';
+
+function setValue(){
+	let value = prompt('Who are you?');
+
+	$('#Value').html(value);
+}
+
+function setHide(){
+	let hideElement = $('#General');
+	let button = $('#HideButton');
+	
+		if($(button).hasClass('active')){ // if всегда работает тогда когда true...
+			$(button).removeClass('active');
+			$(button).text('Скрыть');
+			$(button).css('color', 'black');
+			$(hideElement).show();
+		} else {						// ....иначе будет выполнятс else
+			$(button).addClass('active');
+			$(button).text('Показать');
+			$(button).css('color', 'red');
+			$(hideElement).hide();
+		}
+
+		
+
+	console.log($(button).hasClass('active'));
+
+	console.log(button);
+}
+
+//функция "запуска страницы", всегда должна быть в конце!
 $(function(){
 	
 	$('#menuLinks').append(generateMenuLinks ());
+
+	if (!localStorage.getItem('name')){
+		localStorage.setItem ('name', 'Damir');
+	} else {
+		user= localStorage.getItem('name');
+	}
+
+	$('#userName').html(user);
 });

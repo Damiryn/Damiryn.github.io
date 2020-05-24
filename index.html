@@ -28,7 +28,8 @@
 	</div>
 
 	<div class="content">
-			<h1>Заговок</h1>
+			<h1 >Заговок</h1>
+			<h2 id="userName"></h2>
 		<div class="img">
 			<img src="./image/Zom.jpg">
 			<p>Text text text</p>
@@ -45,21 +46,39 @@
 		</div>
 
 			
-		<div class="button">
+		<div id="button">
 			<p>Вот так! А теперь к кнопкам.</p>
 			<button onclick="inc(def)"> Увеличить </button>
 			<button onclick="dec(def)"> Уменьшить </button>
 			<button onclick="check(def)"> ПРОВЕРКА </button>
 			<button onclick="result()"> Просто кнопка</button>
 			<button onclick="list()">AddList</button>
+			<button onclick="setValue()">Записать новое значение</button>
+			<button id="HideButton", onclick="setHide(this)">Скрыть</button>
 		</div>
 
-			<ul id="itemlist">
-			
-			</ul>
+			<div id="General">
+				<div class="mr-5">Hello, how are you?</div>
+				<div id='Value'></div>
+			</div>
+
+			<ul id="itemlist"></ul>
+
+			<!-- Zadacha -->
+			<div id="calculator">
+				<p>Калькултор телефонов</p>
+					<div id="telItems">
+						<input id="bank_balans" type="number" placeholder="Сколько у тебя денег?"><br>
+						<input id="rate_tel" type="number" placeholder="Сколько стоит телефон?"><br>
+						<input id="rate_acc" type="number" placeholder="Сколько стоит аксессуар?"><br>
+						<input type="submit" value="Отправить" onclick="SummaTell()">					
+					</div>
+				<p id="Telephone"></p>
+			</div>
+
 	</div>
 
-	<dir class="footer">Подвал</dir>
+	<div class="footer">Подвал</div>
 
 </div>
 </body>

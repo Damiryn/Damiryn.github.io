@@ -53,12 +53,19 @@ body{
 	margin: 10px 0;
 }
 
-h1{
+h1, h2{
 	margin: 0;
 	text-align: center;
 	height: 68px;
 }
 
+.img{
+	float: left;
+	width: 479px;
+	height: 250px;
+	margin: 10px;
+	border: 1px solid blue;
+}
 
 .text{
 	font-size: 20px;
@@ -68,20 +75,16 @@ h1{
 	width: 479px;
 	height: 250px;
 	margin: 10px;
+	border: 1px solid blue;
 }
 
-.img{
-	float: left;
-	width: 479px;
-	height: 250px;
-	margin: 10px;
-}
 
-.button{
+#button{
 	text-align: center;
+	border: 1px solid blue;
 }
 
-.button button{
+#button button{
 	text-align: center;
 	border: 1px solid blue;
 	background-color: #00ffff;
@@ -113,4 +116,25 @@ h1{
 
 .target{
 	cursor: pointer;
+}
+#General{
+	display: flex;
+	
+}
+.mr-5{
+	margin-right: 5px;
+}
+
+#calculator{
+
+	height: 200px;
+	border: 1px solid blue;
+	text-align: center;
+	background-color: #00ffff;
+}
+
+#telItems input{
+	width: 200px;
+	border: 1px solid blue;
+	
 }
