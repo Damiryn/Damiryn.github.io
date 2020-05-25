@@ -102,6 +102,18 @@ function addHeader (){
 	$('.downmenu').append(header);
 }
 
+function addTasks (){
+	let textTasks = $('#addTasks').val();
+	let task = `
+			<div class="addTasks">
+				<div>${textTasks}
+				<button class="dilete" onclick="dellist(this.parentNode.parentNode)">x</button>
+				</div>
+			</div>`;
+
+	$('#Tasks').append(task);
+}
+
 function dellist (element){
 	console.log('Удалить');
 	console.log(element);
@@ -162,9 +174,6 @@ console.log (custom);
 // Zadacha
 
 
-
-
-
 function SummaTell() {
 
 const rate_tax = 0.1;
@@ -204,7 +213,10 @@ let SumAcc = 0;
 
 	$('#Telephone').append('Общая сумма покупки = ',SumMyPorchases);
 
+
 };
+
+//function delRezultTelepphone{ 	$('#Telephone').empty(); };
 
 	//$('#Telephone').html(SummaTell ());
 

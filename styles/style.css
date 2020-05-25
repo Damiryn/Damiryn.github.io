@@ -40,8 +40,8 @@ body{
 	background-color: #00ffff;
 	color: black;
 	padding: 5px;
-	text-decoration: none;
 	margin: 10px 0px;
+	text-decoration: none;
 }
 
 .header button {
@@ -60,28 +60,53 @@ h1, h2{
 }
 
 .img{
-	float: left;
+	/*float: left;*/
 	width: 479px;
 	height: 250px;
-	margin: 10px;
+	margin: 5px 0;
 	border: 1px solid blue;
 }
 
 .text{
+/*	float: right;*/
 	font-size: 20px;
 	vertical-align: top;
-	float: right;
 	overflow: hidden;
 	width: 479px;
 	height: 250px;
-	margin: 10px;
+	margin: 5px 0;
 	border: 1px solid blue;
 }
 
+.addTasks{
+	border: 1px solid blue;
+	width: 479px;
+	height: 100px;
+	background-color: #00ffff;
+	text-align: center;
+	margin: 5px 0;
+
+}
+
+#addTasks{
+	width: 479px;
+	height: 100px;
+	max-width: 450px;
+}
+
+#buttonTasks{
+	text-align: center;
+	border: 1px solid blue;
+	background-color: #00ffff;
+	color: black;
+	padding: 7px;
+	margin: 10px 0;
+}
 
 #button{
 	text-align: center;
 	border: 1px solid blue;
+	margin: 5px 0;
 }
 
 #button button{
@@ -91,7 +116,7 @@ h1, h2{
 	color: black;
 	padding: 7px;
 	margin: 10px 0px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .addMenu {
 	text-align: center;
@@ -100,7 +125,7 @@ h1, h2{
 	color: black;
 	padding: 7px;
 	margin: 10px 0px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 #itemlist {
@@ -126,7 +151,7 @@ h1, h2{
 }
 
 #calculator{
-
+	margin: 5px 0;
 	height: 200px;
 	border: 1px solid blue;
 	text-align: center;
