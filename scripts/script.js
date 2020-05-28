@@ -213,7 +213,6 @@ let SumAcc = 0;
 
 	$('#Telephone').append('Общая сумма покупки = ',SumMyPorchases);
 
-
 };
 
 //function delRezultTelepphone{ 	$('#Telephone').empty(); };
@@ -221,48 +220,6 @@ let SumAcc = 0;
 	//$('#Telephone').html(SummaTell ());
 
 
-
-/*	function SummaTell() {
-
-const rate_tax = 0.1;
-const rate_tel = 100;
-const rate_acc = 10;
-const bank_balans = 500;
-
-let tell = 0;
-
-	let	stel = rate_acc + rate_tel + (rate_tel * rate_tax);
-		console.log (stel);
-		
-
-		while (tell < bank_balans) {
-				console.log ('Yes, buy!');
-				tell = bank_balans - stel;
-			    console.log (tell);
-                
-        if (tell > bank_balans){
-				console.log ('No balans');
-		
-			};	
-
-		};
-return tell;
-	
-};
-
-SummaTell ();
-
-		if (stel > bank_balans){
-				console.log ('No balans');
-				};	
-
-	for (let stel = 0; stel < bank_balans; stel = stel + stel){
-			if (stel < bank_balans){
-						
-			} else {
-				
-			}
-		};*/
 
 let menuLinks = [
 	'Home',
@@ -305,12 +262,32 @@ function setHide(){
 			$(hideElement).hide();
 		}
 
-		
-
 	console.log($(button).hasClass('active'));
-
 	console.log(button);
 }
+
+
+function Selectors(){
+
+	$('.items1 li:first').css('color', 'yellow');
+	$('.items1 li:last').css('color', 'yellow');
+	$('i+b').css('color', 'yellow');
+	$('[value="Добавить"]').css('background-color','pink');
+
+
+};
+
+
+function SelOff(){
+
+	$('.items1 li:first').css('color', 'blue');
+	$('.items1 li:last').css('color', 'blue');
+	$('i+b').css('color', 'red');
+	$('[value="Добавить"]').css('background-color','#00ffff');
+};
+
+
+
 
 //функция "запуска страницы", всегда должна быть в конце!
 $(function(){
@@ -324,4 +301,33 @@ $(function(){
 	}
 
 	$('#userName').html(user);
+
+	$('button').on('click', function(){
+		let attr = $(this).attr('id');
+			console.log(!!attr); 			// !! как '-' на '-'
+		
+		if (!!attr){
+			if (attr === 'HideButton'){
+				setHide();
+			}else{
+				console.log('No ID');
+			}
+		}else{
+			let text = $(this).text();
+			
+			switch (text){
+				//case "Скрыть": 					// if (condition)
+				//case "Показать":  				// if (condition)
+				case "AddList":  					// if (condition)
+					list ();
+				case "Поменять цвета":
+					Selectors();
+					break;							//без брейка работает только 1 из 2 кнопок (либо-либо) потому что проскакивает?
+				case "Вернуть как было": 		
+					SelOff();
+			default: 								// else
+				console.log(text);
+			}
+		}
+	});
 });

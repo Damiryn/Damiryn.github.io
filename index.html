@@ -11,7 +11,7 @@
 
 	<div class="header">
 		<div class="fixmenu">
-			<div class="menu" id="menuLinks">
+			<div id="menuLinks" class="menu" >
 				<a href="">Главная</a>
 				<a href="">Новости</a>
 				<a href="">Музыка</a>
@@ -23,7 +23,7 @@
 			</div>	
 		</div>	
 			<div class="downmenu">
-				<button onclick="addHeader()">Добавить</button>
+				<button>Добавить</button>
 			</div>
 	</div>
 
@@ -38,11 +38,24 @@
 
 		<div class="text">
 			<p>Здесь должн быть текст, много текста, но его не будет так как:</p>
-			<ul>
+			<ul class="items1">
 				<li>нет идей</li>
 				<li>нет опыта</li>
-				<li>нет <b>Кекса</b></li>
+				<li><i>нет</i> <b>Кекса</b></li>
+				<li>Тест</li>
+				<li>Текст</li>
+				<li>Тест текст</li>
 			</ul>
+			<ul class="items2">	
+				<li>нет идей</li>
+				<li>нет опыта</li>
+				<li><i>нет</i> <b>Кекса</b></li>
+				<li>Тест</li>
+				<li>Текст</li>
+				<li>Тест текст</li>
+			</ul>
+			<button>Поменять цвета</button>
+			<button>Вернуть как было</button>
 		</div>
 
 		<div id="Tasks">
@@ -53,13 +66,13 @@
 			
 		<div id="button">
 			<p>Вот так! А теперь к кнопкам.</p>
-			<button onclick="inc(def)"> Увеличить </button>
-			<button onclick="dec(def)"> Уменьшить </button>
-			<button onclick="check(def)"> ПРОВЕРКА </button>
-			<button onclick="result()"> Просто кнопка</button>
-			<button onclick="list()">AddList</button>
-			<button onclick="setValue()">Записать новое значение</button>
-			<button id="HideButton", onclick="setHide(this)">Скрыть</button>
+			<button > Увеличить </button>
+			<button > Уменьшить </button>
+			<button > ПРОВЕРКА </button>
+			<button > Просто кнопка</button>
+			<button >AddList</button>
+			<button >Записать новое значение</button>
+			<button id="HideButton">Скрыть</button>
 		</div>
 
 			<div id="General">
@@ -76,7 +89,7 @@
 						<input id="bank_balans" type="number" placeholder="Сколько у тебя денег?"><br>
 						<input id="rate_tel" type="number" placeholder="Сколько стоит телефон?"><br>
 						<input id="rate_acc" type="number" placeholder="Сколько стоит аксессуар?"><br>
-						<input type="submit" value="Отправить" onclick="SummaTell()">
+						<input type="submit" value="Отправить" onclick="SummaTell()"> 
 					</div>
 				<p id="Telephone"></p>
 						<input type="submit" value="кнопка не работает!" onclick="delRezultTelepphone()">					

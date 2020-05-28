@@ -30,19 +30,20 @@ body{
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+
 }
 
 
-}
 #menuLinks a {
 	text-align: center;
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 	background-color: #00ffff;
-	color: black;
+	color: red;
 	padding: 5px;
 	margin: 10px 0px;
 	text-decoration: none;
-}
+	
+} 
 
 .header button {
 	text-align: center;
@@ -73,9 +74,10 @@ h1, h2{
 	vertical-align: top;
 	overflow: hidden;
 	width: 479px;
-	height: 250px;
+
 	margin: 5px 0;
 	border: 1px solid blue;
+	color: blue;
 }
 
 .addTasks{
@@ -158,8 +160,29 @@ h1, h2{
 	background-color: #00ffff;
 }
 
-#telItems input{
+#telItems < input{
 	width: 200px;
 	border: 1px solid blue;
 	
 }
+
+
+i + b {
+	color: red;
+}
+
+/*
+
+Обращатся по разным селекторам
+
+1.Первый эл. из списка тегов (:first)
+
+2.Первый эл. из списка тегов (:last)
+
+3.Соседние эл. из списка тегов (тег + тег)
+
+4.На каждый атрибут еще по три типа вывести в консоль ([атрибут = имя атрибута])
+
+область видемости функции !!!
+
+*/
