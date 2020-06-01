@@ -1,20 +1,12 @@
 body{
-	background: url("../image/bigfon.jpg"); 
+	background:url("../image/bluefon.png");
+	background-attachment: fixed;
 	background-size: cover;
 	color: #000;
-
 }
 
-/*h1 {
-	font-size: 20px;
-	color: #000;
-}*/
-
-.fix{
-	max-width: 1010px;
-	margin: 0 auto;
-
-}
+/*font-family: algerian; Почему в боди меняет только выборочные теги? почему не захватывает все*/ 
+	/*border: 1px solid blue;*/
 
 .header {
     height: 60px;
@@ -24,114 +16,177 @@ body{
 
 .fixmenu {
     height: inherit;
-    background: #00ffff;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-
 }
 
-
 #menuLinks a {
+	background-color: #add9fe;
 	text-align: center;
-	/*border: 1px solid blue;*/
-	background-color: #00ffff;
-	color: red;
-	padding: 5px;
-	margin: 10px 0px;
-	text-decoration: none;
-	
+    border-radius: 14px;
+    color: black;
+    padding: 7px;
+    margin: 10px;
+    text-decoration: none;
+    border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+    font-size: 16px;
+	font-family: comic sans ms;
 } 
+
+.avatar{
+	height: 60px;
+	width: 60px;
+	border-radius: 60px;
+	background-color: yellow;
+	margin: 10px;
+	font-family: comic sans ms;
+}
 
 .header button {
 	text-align: center;
-	border: 1px solid blue;
-	background-color: #00ffff;
+    border-radius: 14px;
+    background-color: #add9fe;
+    color: black;
+    padding: 7px;
+    margin: 10px;
+    text-decoration: none;
+    border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+    font-size: 16px;
+    font-family: comic sans ms;
+}
+
+.addMenu {
+	text-align: center;
+	border-radius: 14px;
+	background-color: #add9fe;
 	color: black;
 	padding: 7px;
-	margin: 10px 0;
+	margin: 10px 0px;
+	text-decoration: none;
+    border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+    font-size: 16px;
+    font-family: comic sans ms;
+}
+
+.content{
+    margin: 60px 0 0 0;
+	/*font-family: wide latin;*/
 }
 
 h1, h2{
-	margin: 0;
 	text-align: center;
-	height: 68px;
+	margin: 0;
+	height: 50px;
+	width: 1040px;	 
+}
+
+.contentBox{
+	display: flex;
 }
 
 .img{
-	/*float: left;*/
-	width: 479px;
-	height: 250px;
+	width: 500px;
 	margin: 5px 0;
-	border: 1px solid blue;
+	padding: 10px;
+}
+
+img {
+	padding: 10px;
 }
 
 .text{
-/*	float: right;*/
 	font-size: 20px;
 	vertical-align: top;
-	overflow: hidden;
-	width: 479px;
-
+	width: 500px;
 	margin: 5px 0;
-	border: 1px solid blue;
-	color: blue;
+	color: black;
+	padding: 10px;
+}
+
+#addTasks{
+	width: 500px;
+	height: 100px;
+	max-width: 500px;
+	border-radius: 50px;
+    text-align: center;
 }
 
 .addTasks{
 	border: 1px solid blue;
-	width: 479px;
+	width: 500px;
 	height: 100px;
-	background-color: #00ffff;
+	background-color: #add9fe;
 	text-align: center;
 	margin: 5px 0;
+	border-radius: 50px;
+    text-align: center;
+    vertical-align: middle;
 
-}
-
-#addTasks{
-	width: 479px;
-	height: 100px;
-	max-width: 450px;
 }
 
 #buttonTasks{
 	text-align: center;
-	border: 1px solid blue;
-	background-color: #00ffff;
-	color: black;
-	padding: 7px;
-	margin: 10px 0;
+    border-radius: 14px;
+    background-color: #add9fe;
+    color: black;
+    padding: 7px;
+    margin: 10px;
+    text-decoration: none;
+    border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+    font-size: 16px;
+    font-family: comic sans ms;
 }
 
 #button{
 	text-align: center;
-	border: 1px solid blue;
-	margin: 5px 0;
+	margin: 10px 0;
+	width: 1040px;
+	font-weight: bold;
+/*	border: 1px solid blue;*/
 }
 
 #button button{
 	text-align: center;
-	border: 1px solid blue;
-	background-color: #00ffff;
-	color: black;
-	padding: 7px;
-	margin: 10px 0px;
-	/*overflow: hidden;*/
+    border-radius: 14px;
+    background-color: #add9fe;
+    color: black;
+    padding: 7px;
+    text-decoration: none;
+    border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+    font-size: 16px;
+    font-family: comic sans ms;
+    /*margin: 10px;*/
 }
-.addMenu {
-	text-align: center;
-	border: 1px solid blue;
-	background-color: #00ffff;
-	color: black;
-	padding: 7px;
-	margin: 10px 0px;
-	/*overflow: hidden;*/
+
+#General{
+	display: flex;
+	color: red;
+	font-weight: bold;
+}
+.mr-5{
+	margin-right: 5px;
 }
 
 #itemlist {
-	color: yellow;
+	color: red;
 	font-weight: bold;
 }
 
@@ -144,26 +199,55 @@ h1, h2{
 .target{
 	cursor: pointer;
 }
-#General{
-	display: flex;
-	
+
+
+
+
+
+#imagecontainer{
+	border: 1px solid blue;
+	height: 500px;
+	width: 1040px;
+
 }
-.mr-5{
-	margin-right: 5px;
+
+.changeImg {
+    transition: 1s; /* Время эффекта */
+   }
+.changeImg:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #calculator{
 	margin: 5px 0;
 	height: 200px;
-	border: 1px solid blue;
+	width: 1040px;
+	border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
 	text-align: center;
-	background-color: #00ffff;
+	background-color: #add9fe;
 }
 
 #telItems < input{
 	width: 200px;
 	border: 1px solid blue;
-	
 }
 
 
@@ -186,3 +270,42 @@ i + b {
 область видемости функции !!!
 
 */
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

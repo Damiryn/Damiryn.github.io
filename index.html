@@ -11,7 +11,7 @@
 
 	<div class="header">
 		<div class="fixmenu">
-			<div id="menuLinks" class="menu" >
+			<div id="menuLinks" class="menu">
 				<a href="">Главная</a>
 				<a href="">Новости</a>
 				<a href="">Музыка</a>
@@ -19,48 +19,51 @@
 				<a href="">Контакты</a>
 			</div>
 			<div class="avatar">
-				<a href="">Аватар</a>
+				<a href="">avatar</a>
 			</div>	
 		</div>	
 			<div class="downmenu">
-				<button>Добавить</button>
+				<button><a>Добавить</a></button>
 			</div>
 	</div>
 
 	<div class="content">
-			<h1 >Заговок</h1>
+			<h1>Заговок</h1>
 			<h2 id="userName"></h2>
-		<div class="img">
-			<img src="./image/Zom.jpg">
-			<p>Text text text</p>
-		</div>
+		
+		<div class="contentBox">	
+			<div class="img">
+				<p><img src="./image/Zom.jpg" align="left">
+				Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text </p>
+			</div>
 
 
-		<div class="text">
-			<p>Здесь должн быть текст, много текста, но его не будет так как:</p>
-			<ul class="items1">
-				<li>нет идей</li>
-				<li>нет опыта</li>
-				<li><i>нет</i> <b>Кекса</b></li>
-				<li>Тест</li>
-				<li>Текст</li>
-				<li>Тест текст</li>
-			</ul>
-			<ul class="items2">	
-				<li>нет идей</li>
-				<li>нет опыта</li>
-				<li><i>нет</i> <b>Кекса</b></li>
-				<li>Тест</li>
-				<li>Текст</li>
-				<li>Тест текст</li>
-			</ul>
-			<button>Поменять цвета</button>
-			<button>Вернуть как было</button>
+			<div class="text">
+				<div>Здесь должн быть текст, много текста, но его не будет так как:</div>
+				<ul class="items1">
+					<li>нет идей</li>
+					<li>нет опыта</li>
+					<li><i>нет</i> <b>Кекса</b></li>
+					<li>Тест</li>
+					<li>Текст</li>
+					<li>Тест текст</li>
+				</ul>
+				<ul class="items2">	
+					<li>нет идей</li>
+					<li>нет опыта</li>
+					<li><i>нет</i> <b>Кекса</b></li>
+					<li>Тест</li>
+					<li>Текст</li>
+					<li>Тест текст</li>
+				</ul>
+				<button>Поменять цвета</button>
+				<button>Вернуть как было</button>
+			</div>
 		</div>
 
 		<div id="Tasks">
-			<input id="addTasks" type="comment" placeholder="Напиши задачу">	
-			<input id="buttonTasks" type="submit" value="Добавить" onclick="addTasks()">
+			<input id="addTasks" type="comment" placeholder="Напиши задачу">
+			<input id="buttonTasks" type="submit" value="Добавить задачу" onclick="addTasks()">
 		</div>
 		
 			
@@ -73,7 +76,9 @@
 			<button >AddList</button>
 			<button >Записать новое значение</button>
 			<button id="HideButton">Скрыть</button>
+			<button id="createPopup">Показать окно</button>
 		</div>
+			<div id="modals"></div>
 
 			<div id="General">
 				<div class="mr-5">Hello, how are you?</div>
@@ -96,6 +101,16 @@
 			</div>
 
 	</div>
+			
+
+
+			<div id="toggleImage">
+				<img class="changeImg" src="./image/peng.jpg" width="250px" height="200px" onclick="addImage()">
+				<img src="./image/skyearth.jpg" width="250px" height="200px">
+				<img src="./image/orangerock.jpg" width="250px" height="200px">
+			</div>
+				<div id="imagecontainer"></div>
+
 
 	<div class="footer">Подвал</div>
 
