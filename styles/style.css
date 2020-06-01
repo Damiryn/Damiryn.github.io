@@ -115,6 +115,16 @@ img {
 	padding: 10px;
 }
 
+.text button{
+	text-align: center;
+    border-radius: 14px;
+    background-color: #add9fe;
+    color: black;
+    padding: 3px;
+    font-size: 14px;
+
+}
+
 #addTasks{
 	width: 500px;
 	height: 100px;

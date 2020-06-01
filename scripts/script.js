@@ -254,13 +254,25 @@ let SumAcc = 0;
 
 function addImage(){
 
-	let clickImg = $('.changeImg').clone().append();
+	let clickImg = $('.clickImg').clone().append();
 			
 	console.log('Hello')
 	
 	$('#imagecontainer').append(clickImg);
+		
+		// while(addImage()){
+		// 	break;
+		// }
 
+		// // if (addImage()){
+		// // 	console.log('Yes')
+		// // 	return;
+		// // }
 }
+
+
+	
+
 // onmouseenter="toggleImage(this, true)" onmouseleave="toggleImage(this)"
 // function toggleImage(el, act){
 
