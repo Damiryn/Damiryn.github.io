@@ -55,7 +55,7 @@ function addTasks (){
 				</div>
 			</div>`;
 
-	$('#Tasks').append(task);
+	$('#newTasks').append(task);
 }
 
 
@@ -246,9 +246,13 @@ let SumAcc = 0;
 				console.log (SumMyPorchases, 'No balans');
 			};	
 
-	$('#Telephone').append('Общая сумма покупки = ',SumMyPorchases);
+	$('#Telephone').append(SumMyPorchases);
 
 };
+
+function delRezultTelepphone(){
+	$('#Telephone').empty()
+}
 
 //Переключатель картинок ??
 
@@ -271,7 +275,11 @@ function addImage(){
 }
 
 
-	
+
+function toggleSidebar() { 
+	let f = $('.sideBar').toggleClass('open');
+	console.log(f);
+}	
 
 // onmouseenter="toggleImage(this, true)" onmouseleave="toggleImage(this)"
 // function toggleImage(el, act){
@@ -340,6 +348,36 @@ $(function(){
 	});
 });
 
+
+
+
+// function heartInc(act){
+// let rez = 0;
+
+// 	act = act + 1;
+// 	console.log (act);
+// 	rez = act;
+// 	console.log (rez);
+// }
+
+
+
+// let act = 0;
+// 	if (act==0){
+// 		act=act+1;
+// 	}
+
+
+
+// 	console.log(act);
+	// if (act){
+	// 	h++;
+	// }else{
+	// 	console.log('no');
+	// // 	el = el + 1;
+	// console.log(el);
+	// act = el;
+//}
 
 
 

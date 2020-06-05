@@ -1,36 +1,72 @@
+html, body {
+    margin: 0;
+}
+
+* {
+	outline: none;
+	text-decoration: none;
+}
+
 body{
-	background:url("../image/bluefon.png");
+	/*background:url("../image/bluefon.png");*/
 	background-attachment: fixed;
 	background-size: cover;
 	color: #000;
+	background: linear-gradient(to bottom, #9999ff, #ffb3d9, #9999ff);
 }
 
 /*font-family: algerian; Почему в боди меняет только выборочные теги? почему не захватывает все*/ 
 	/*border: 1px solid blue;*/
 
 .header {
-    height: 60px;
+    height: 70px;
     width: 100%;
     position: relative;
+
 }
 
-.fixmenu {
+/*.sideBar {
     height: inherit;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+
+}*/
+
+.sideBar {
+    height: 0;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+   	background-color: red;
+    
 }
 
-#menuLinks a {
+.sideBar.open {
+    height: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: 4s;
+}
+
+.avatar{
+	display: flex;
+}
+
+#menuLinks > a {
 	background-color: #add9fe;
 	text-align: center;
     border-radius: 14px;
     color: black;
     padding: 7px;
     margin: 10px;
-    text-decoration: none;
     border-width: 2px;
     border-style: outset;
     border-color: rgb(118, 118, 118);
@@ -46,6 +82,8 @@ body{
 	background-color: yellow;
 	margin: 10px;
 	font-family: comic sans ms;
+	display: flex;
+	align-items: center;
 }
 
 .header button {
@@ -64,6 +102,10 @@ body{
     font-family: comic sans ms;
 }
 
+.downmenu{
+	text-align: center;
+}
+
 .addMenu {
 	text-align: center;
 	border-radius: 14px;
@@ -80,39 +122,54 @@ body{
     font-family: comic sans ms;
 }
 
+
+
 .content{
-    margin: 60px 0 0 0;
+    margin: 70px 0 0 0;
 	/*font-family: wide latin;*/
 }
 
-h1, h2{
+.h1_h2{
 	text-align: center;
 	margin: 0;
-	height: 50px;
-	width: 1040px;	 
+	height: 150px;
+	/*width: 1040px;*/	
+	background: linear-gradient(to top, #9999ff, #ffe6e6);
 }
+
+
 
 .contentBox{
 	display: flex;
+	align-items: center;
+	justify-content: center;
+/*	margin-left: 500px;
+	margin-right: 500px;
+	max-width: 1200px*/
 }
 
 .img{
-	width: 500px;
-	margin: 5px 0;
+	width: 200px;
 	padding: 10px;
+
 }
 
 img {
 	padding: 10px;
 }
+.img img{
+	border-radius: 50px;
+}
 
 .text{
+	width: 700px;
 	font-size: 20px;
 	vertical-align: top;
-	width: 500px;
-	margin: 5px 0;
 	color: black;
 	padding: 10px;
+	background: white;
+	align-self: end;
+
 }
 
 .text button{
@@ -125,24 +182,17 @@ img {
 
 }
 
+#Tasks{
+	text-align: center;
+	align-self: end;
+}
+
 #addTasks{
-	width: 500px;
+	width: 200px;
 	height: 100px;
 	max-width: 500px;
 	border-radius: 50px;
     text-align: center;
-}
-
-.addTasks{
-	border: 1px solid blue;
-	width: 500px;
-	height: 100px;
-	background-color: #add9fe;
-	text-align: center;
-	margin: 5px 0;
-	border-radius: 50px;
-    text-align: center;
-    vertical-align: middle;
 
 }
 
@@ -162,10 +212,33 @@ img {
     font-family: comic sans ms;
 }
 
+#newTasks{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addTasks{
+	border: 1px solid blue;
+	width: 200px;
+	height: 100px;
+	background-color: #add9fe;
+	border-radius: 50px;
+    text-align: center;
+}
+
+
+
+
+.contentButton{
+	display: flex;
+	justify-content: center;
+}
+
 #button{
 	text-align: center;
 	margin: 10px 0;
-	width: 1040px;
+/*	width: 1040px;*/
 	font-weight: bold;
 /*	border: 1px solid blue;*/
 }
@@ -183,8 +256,51 @@ img {
     border-image: initial;
     font-size: 16px;
     font-family: comic sans ms;
-    /*margin: 10px;*/
+    margin: 2px;
 }
+
+#calculator{
+	margin: 5px 0;
+	height: 300px;
+	width: 500px;
+	/*border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;*/
+	/*background-color: #add9fe;*/
+	text-align: center;
+}
+
+#telItems input{
+	width: 200px;
+	border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+	padding: 6px;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+#calculator input{
+	width: 180px;
+	border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+	padding: 6px;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+
+
+#iDontKnowThis{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 #General{
 	display: flex;
@@ -213,13 +329,11 @@ img {
 
 
 
-
-#imagecontainer{
-	border: 1px solid blue;
-	height: 500px;
-	width: 1040px;
-
+#toggleImage{
+	display: flex;
+	justify-content: center;
 }
+
 
 .changeImg {
     transition: 1s; /* Время эффекта */
@@ -242,23 +356,6 @@ img {
 
 
 
-
-#calculator{
-	margin: 5px 0;
-	height: 200px;
-	width: 1040px;
-	border-width: 2px;
-    border-style: outset;
-    border-color: rgb(118, 118, 118);
-    border-image: initial;
-	text-align: center;
-	background-color: #add9fe;
-}
-
-#telItems < input{
-	width: 200px;
-	border: 1px solid blue;
-}
 
 
 i + b {
@@ -318,4 +415,55 @@ i + b {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

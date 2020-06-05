@@ -6,87 +6,101 @@
 <link rel="stylesheet" type="text/css" href="./styles/style.css">
 <title>My First Homework ver. 1.0</title>
 </head>
-<body>
-<div class="fix">
+
 
 	<div class="header">
-		<div class="fixmenu">
-			<div id="menuLinks" class="menu">
-				<a href="">Главная</a>
-				<a href="">Новости</a>
-				<a href="">Музыка</a>
-				<a href="">Картинки</a>
-				<a href="">Контакты</a>
-			</div>
-			<div class="avatar">
-				<a href="">avatar</a>
-			</div>	
-		</div>	
-			<div class="downmenu">
-				<button><a>Добавить</a></button>
-			</div>
+
+				<div id="fixmenu">
+
+					<div class="sideBar">
+						<div id="menuLinks" class="menu">
+							<a href="">Главная</a>
+							<a href="">Новости</a>
+							<a href="">Музыка</a>
+							<a href="">Картинки</a>
+							<a href="">Контакты</a>
+						</div>
+							<div class="avatar">
+								<a href="">avatar</a>
+							</div>	
+					</div>	
+
+				</div>
+
+					<div class="downmenu">
+						<button onclick="toggleSidebar()">Меню сайта</button>
+						<button><a>Добавить</a></button>
+					</div>
+
 	</div>
 
-	<div class="content">
-			<h1>Заговок</h1>
-			<h2 id="userName"></h2>
-		
-		<div class="contentBox">	
-			<div class="img">
-				<p><img src="./image/Zom.jpg" align="left">
-				Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text Text text text </p>
-			</div>
 
-
-			<div class="text">
-				<div>Здесь должн быть текст, много текста, но его не будет так как:</div>
-				<ul class="items1">
-					<li>нет идей</li>
-					<li>нет опыта</li>
-					<li><i>нет</i> <b>Кекса</b></li>
-					<li>Тест</li>
-					<li>Текст</li>
-					<li>Тест текст</li>
-				</ul>
-				<ul class="items2">	
-					<li>нет идей</li>
-					<li>нет опыта</li>
-					<li><i>нет</i> <b>Кекса</b></li>
-					<li>Тест</li>
-					<li>Текст</li>
-					<li>Тест текст</li>
-				</ul>
-				<button>Поменять цвета</button>
-				<button>Вернуть как было</button>
-			</div>
-		</div>
-
-		<div id="Tasks">
-			<input id="addTasks" type="comment" placeholder="Напиши задачу">
-			<input id="buttonTasks" type="submit" value="Добавить задачу" onclick="addTasks()">
-		</div>
-		
 			
-		<div id="button">
-			<p>Вот так! А теперь к кнопкам.</p>
-			<button > Увеличить </button>
-			<button > Уменьшить </button>
-			<button > ПРОВЕРКА </button>
-			<button > Просто кнопка</button>
-			<button >AddList</button>
-			<button >Записать новое значение</button>
-			<button id="HideButton">Скрыть</button>
-			<button id="createPopup">Показать окно</button>
-		</div>
-			<div id="modals"></div>
-
-			<div id="General">
-				<div class="mr-5">Hello, how are you?</div>
-				<div id='Value'></div>
+	<div class="content">
+			<div class="h1_h2">
+				<h1>Бложик-хуежик!</h1>
+				<h2 id="userName"></h2>
 			</div>
 
-			<ul id="itemlist"></ul>
+		
 
+			<div class="contentBox">
+								
+					<div class="img">
+						<img src="./image/Zom.jpg" align="left">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum consequat ex et aliquet. Vestibulum bibendum mattis hendrerit. Donec a porttitor lectus. Praesent eu lectus condimentum, facilisis sem sit amet, aliquet urna. Sed malesuada diam leo, at gravida lacus congue in. Donec sodales nec nisi non ornare. Suspendisse nec pulvinar ante. Duis mattis mi leo, vel ullamcorper ante placerat ac. Maecenas consectetur ante eget ex dictum scelerisque et eu metus. Aenean eget ullamcorper nibh, tempor hendrerit lorem. Sed pretium felis in ex sagittis tempus.
+						</p>	
+					</div>
+
+					<div class="text">
+						<div>Здесь должн быть текст, много текста, но его не будет так как:</div>
+						<ul class="items1">
+							<li>нет идей</li>
+							<li>нет опыта</li>
+							<li><i>нет</i> <b>Кекса</b></li>
+							<li>Тест</li>
+							<li>Текст</li>
+							<li>Тест текст</li>
+						</ul>
+						<ul class="items2">	
+							<li>нет идей</li>
+							<li>нет опыта</li>
+							<li><i>нет</i> <b>Кекса</b></li>
+							<li>Тест</li>
+							<li>Текст</li>
+							<li>Тест текст</li>
+						</ul>
+						<button>Поменять цвета</button>
+						<button>Вернуть как было</button>
+
+							<div id="button">
+								<p>Вот так! А теперь к кнопкам.</p><br>
+								<button > Увеличить </button>
+								<button > Уменьшить </button>
+								<button > ПРОВЕРКА </button><br>
+								<button > Просто кнопка</button>
+								<button >AddList</button><br>
+								<button >Записать новое значение</button>
+								<button id="HideButton">Скрыть</button>
+								<button id="createPopup">Показать окно</button>
+							</div>
+					</div>
+
+
+					<div id="Tasks">
+						<input id="addTasks" type="comment" placeholder="Текст отзыва"><br>
+						<input id="buttonTasks" type="submit" value="Оставь отзыв" onclick="addTasks()">
+						<div id="newTasks"></div>
+					</div>
+			</div>
+			
+
+
+	
+
+		
+		<div class="contentButton">
+			
 			<!-- Zadacha -->
 			<div id="calculator">
 				<p>Калькултор телефонов</p>
@@ -96,24 +110,47 @@
 						<input id="rate_acc" type="number" placeholder="Сколько стоит аксессуар?"><br>
 						<input type="submit" value="Отправить" onclick="SummaTell()"> 
 					</div>
-				<p id="Telephone"></p>
-						<input type="submit" value="кнопка не работает!" onclick="delRezultTelepphone()">					
+				<p id="Telephone">Общая сумма покупки = </p>
+						<input type="submit" value="Удаление результата" onclick="delRezultTelepphone()">					
+			</div>
+		</div>
+
+
+		<div id="iDontKnowThis">
+			<div id="modals"></div>
+
+			<div id="General">
+				<div class="mr-5">Hello, how are you?</div>
+				<div id='Value'></div>
 			</div>
 
+			<ul id="itemlist"></ul>
+		</div>
 	</div>
 			
 
 
 			<div id="toggleImage">
-				<img class="changeImg" src="./image/peng.jpg" width="250px" height="200px" onclick="addImage()">
+				<img class="changeImg" src="./image/Peng.jpg" width="250px" height="200px" onclick="addImage()">
 				<img class="changeImg" src="./image/skyearth.jpg" width="250px" height="200px">
 				<img class="changeImg" src="./image/orangerock.jpg" width="250px" height="200px">
 			</div>
 				<div id="imagecontainer"></div>
 
 
+			<div id="mySidenav" class="sidenav">
+				  <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
+				  <a href="#">About</a>
+				  <a href="#">Services</a>
+				  <a href="#">Clients</a>
+				  <a href="#">Contact</a>
+			</div>
+
+
+
+
 	<div class="footer">Подвал</div>
 
-</div>
+
 </body>
 </html>
