@@ -8,7 +8,6 @@ html, body {
 }
 
 body{
-	/*background:url("../image/bluefon.png");*/
 	background-attachment: fixed;
 	background-size: cover;
 	color: #000;
@@ -22,42 +21,42 @@ body{
     height: 70px;
     width: 100%;
     position: relative;
-
 }
-
-/*.sideBar {
-    height: inherit;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-
-}*/
 
 .sideBar {
     height: 0;
     width: 100%;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-   	background-color: red;
-    
-}
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+}  
 
 .sideBar.open {
-    height: inherit;
+    height: 70px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    transition: 4s;
+    transition: 0.4s ease-in-out;
+    opacity: 1;
+    overflow: hidden;
+
 }
 
 .avatar{
 	display: flex;
+}
+
+#menuLinks{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: inherit;
 }
 
 #menuLinks > a {
@@ -80,7 +79,7 @@ body{
 	width: 60px;
 	border-radius: 60px;
 	background-color: yellow;
-	margin: 10px;
+	margin-left: 10px;
 	font-family: comic sans ms;
 	display: flex;
 	align-items: center;
@@ -104,6 +103,10 @@ body{
 
 .downmenu{
 	text-align: center;
+	align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 .addMenu {
@@ -133,8 +136,11 @@ body{
 	text-align: center;
 	margin: 0;
 	height: 150px;
+	display: flex;
+    align-items: center;
+    flex-direction: column;
 	/*width: 1040px;*/	
-	background: linear-gradient(to top, #9999ff, #ffe6e6);
+	/*background: linear-gradient(to top, #9999ff, #ffe6e6);*/
 }
 
 
@@ -151,7 +157,7 @@ body{
 .img{
 	width: 200px;
 	padding: 10px;
-
+	align-self: end;
 }
 
 img {
@@ -162,6 +168,7 @@ img {
 }
 
 .text{
+	height: 1000px;
 	width: 700px;
 	font-size: 20px;
 	vertical-align: top;
@@ -170,6 +177,10 @@ img {
 	background: white;
 	align-self: end;
 
+}
+
+.text p {
+	margin-bottom: 0;
 }
 
 .text button{
@@ -230,6 +241,7 @@ img {
 
 
 
+
 .contentButton{
 	display: flex;
 	justify-content: center;
@@ -260,14 +272,7 @@ img {
 }
 
 #calculator{
-	margin: 5px 0;
-	height: 300px;
-	width: 500px;
-	/*border-width: 2px;
-    border-style: outset;
-    border-color: rgb(118, 118, 118);
-    border-image: initial;*/
-	/*background-color: #add9fe;*/
+	font-size: 20px;
 	text-align: center;
 }
 
@@ -293,6 +298,9 @@ img {
     margin: 3px;
 }
 
+#Telephone{
+	height: 40px;
+}
 
 
 #iDontKnowThis{
@@ -466,4 +474,90 @@ i + b {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+
+/* Объекты! карточки */
+
+.box-container {
+    margin: 30px;
+    width: 400px;
+    min-height: 600px;
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    border: 1px solid #e7e8ea;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.box-container.size {
+    margin: 30px;
+    width: 500px;
+    min-height: 700px;
+    background: pink;
+    box-shadow: 20px 40px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    border: 1px solid #e7e8ea;
+    justify-content: space-between;
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+
+.box-title {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 30px;
+}
+
+.box-content {
+    font-family: Roboto,
+        sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+}
+
+.box-autor {
+    font-family: Roboto,
+        sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.autor {
+    margin-left: 8px;
+    color: #118639;
+}
+
+#data_container{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.box-content.red{
+	color: red;
+}
+.box-content.green{
+	color: green;
+}
+.box-content.blue{
+	color: blue;
 }

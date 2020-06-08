@@ -7,31 +7,24 @@
 <title>My First Homework ver. 1.0</title>
 </head>
 
-
 	<div class="header">
-
-				<div id="fixmenu">
-
-					<div class="sideBar">
-						<div id="menuLinks" class="menu">
-							<a href="">Главная</a>
-							<a href="">Новости</a>
-							<a href="">Музыка</a>
-							<a href="">Картинки</a>
-							<a href="">Контакты</a>
-						</div>
-							<div class="avatar">
-								<a href="">avatar</a>
-							</div>	
-					</div>	
-
+			<div class="sideBar">
+				<div id="menuLinks" class="menu">
+					<a href="">Главная</a>
+					<a href="">Новости</a>
+					<a href="">Музыка</a>
+					<a href="">Картинки</a>
+					<a href="">Контакты</a>
 				</div>
+					<div class="avatar">
+						<a href="">avatar</a>
+					</div>	
+			</div>	
 
-					<div class="downmenu">
-						<button onclick="toggleSidebar()">Меню сайта</button>
-						<button><a>Добавить</a></button>
-					</div>
-
+				<div class="downmenu">
+					<button onclick="toggleSidebar()">Меню сайта</button>
+					<button><a>Добавить</a></button>
+				</div>
 	</div>
 
 
@@ -62,32 +55,38 @@
 							<li>Текст</li>
 							<li>Тест текст</li>
 						</ul>
-						<ul class="items2">	
-							<li>нет идей</li>
-							<li>нет опыта</li>
-							<li><i>нет</i> <b>Кекса</b></li>
-							<li>Тест</li>
-							<li>Текст</li>
-							<li>Тест текст</li>
-						</ul>
 						<button>Поменять цвета</button>
 						<button>Вернуть как было</button>
 
 							<div id="button">
 								<p>Вот так! А теперь к кнопкам.</p><br>
-								<button > Увеличить </button>
-								<button > Уменьшить </button>
-								<button > ПРОВЕРКА </button><br>
-								<button > Просто кнопка</button>
+								<button >Увеличить</button>
+								<button >Уменьшить</button>
+								<button >ПРОВЕРКА</button><br>
+								<button >Просто кнопка</button>
 								<button >AddList</button><br>
 								<button >Записать новое значение</button>
 								<button id="HideButton">Скрыть</button>
 								<button id="createPopup">Показать окно</button>
 							</div>
+
+							<div id="calculator">
+									<p>Калькултор телефонов</p>
+								<div id="telItems">
+									<input id="bank_balans" type="number" placeholder="Сколько у тебя денег?"><br>
+									<input id="rate_tel" type="number" placeholder="Сколько стоит телефон?"><br>
+									<input id="rate_acc" type="number" placeholder="Сколько стоит аксессуар?"><br>
+									<input type="submit" value="Рассчитать" onclick="SummaTell()"> 
+								</div>
+									<p id="Telephone">Общая сумма покупки = </p>
+									<input type="submit" value="Удаление результата" onclick="delRezultTelepphone()">					
+							</div>
+
 					</div>
 
 
 					<div id="Tasks">
+						<h2>Ваши отзывы</h2>
 						<input id="addTasks" type="comment" placeholder="Текст отзыва"><br>
 						<input id="buttonTasks" type="submit" value="Оставь отзыв" onclick="addTasks()">
 						<div id="newTasks"></div>
@@ -102,17 +101,7 @@
 		<div class="contentButton">
 			
 			<!-- Zadacha -->
-			<div id="calculator">
-				<p>Калькултор телефонов</p>
-					<div id="telItems">
-						<input id="bank_balans" type="number" placeholder="Сколько у тебя денег?"><br>
-						<input id="rate_tel" type="number" placeholder="Сколько стоит телефон?"><br>
-						<input id="rate_acc" type="number" placeholder="Сколько стоит аксессуар?"><br>
-						<input type="submit" value="Отправить" onclick="SummaTell()"> 
-					</div>
-				<p id="Telephone">Общая сумма покупки = </p>
-						<input type="submit" value="Удаление результата" onclick="delRezultTelepphone()">					
-			</div>
+			
 		</div>
 
 
@@ -147,6 +136,23 @@
 			</div>
 
 
+			<div id="data_container"></div>
+
+
+
+
+			<div id="snoudenStyle">
+				<input type="submit" onclick="snoudenStyle()">
+			</div>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum consequat ex et aliquet. Vestibulum bibendum mattis hendrerit. Donec a porttitor lectus. Praesent eu lectus condimentum, facilisis sem sit amet, aliquet urna. Sed malesuada diam leo, at gravida lacus congue in. Donec sodales nec nisi non ornare. Suspendisse nec pulvinar ante. Duis mattis mi leo, vel ullamcorper ante placerat ac. Maecenas consectetur ante eget ex dictum scelerisque et eu metus. Aenean eget ullamcorper nibh, tempor hendrerit lorem. Sed pretium felis in ex sagittis tempus.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum consequat ex et aliquet. Vestibulum bibendum mattis hendrerit. Donec a porttitor lectus. Praesent eu lectus condimentum, facilisis sem sit amet, aliquet urna. Sed malesuada diam leo, at gravida lacus congue in. Donec sodales nec nisi non ornare. Suspendisse nec pulvinar ante. Duis mattis mi leo, vel ullamcorper ante placerat ac. Maecenas consectetur ante eget ex dictum scelerisque et eu metus. Aenean eget ullamcorper nibh, tempor hendrerit lorem. Sed pretium felis in ex sagittis tempus.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum consequat ex et aliquet. Vestibulum bibendum mattis hendrerit. Donec a porttitor lectus. Praesent eu lectus condimentum, facilisis sem sit amet, aliquet urna. Sed malesuada diam leo, at gravida lacus congue in. Donec sodales nec nisi non ornare. Suspendisse nec pulvinar ante. Duis mattis mi leo, vel ullamcorper ante placerat ac. Maecenas consectetur ante eget ex dictum scelerisque et eu metus. Aenean eget ullamcorper nibh, tempor hendrerit lorem. Sed pretium felis in ex sagittis tempus.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum consequat ex et aliquet. Vestibulum bibendum mattis hendrerit. Donec a porttitor lectus. Praesent eu lectus condimentum, facilisis sem sit amet, aliquet urna. Sed malesuada diam leo, at gravida lacus congue in. Donec sodales nec nisi non ornare. Suspendisse nec pulvinar ante. Duis mattis mi leo, vel ullamcorper ante placerat ac. Maecenas consectetur ante eget ex dictum scelerisque et eu metus. Aenean eget ullamcorper nibh, tempor hendrerit lorem. Sed pretium felis in ex sagittis tempus.
+			</p>	
 
 
 	<div class="footer">Подвал</div>

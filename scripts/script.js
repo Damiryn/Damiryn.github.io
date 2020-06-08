@@ -1,3 +1,108 @@
+//Объекты (карточки)
+const boxes = [{
+		title: 'Заголовок 1',
+		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum nibh arcu, et luctus tellus vulputate molestie. Quisque fringilla hendrerit feugiat. Cras eu tellus sed nisl euismod euismod. Sed molestie, dui quis convallis ultrices, mi leo hendrerit enim, in facilisis elit augue in orci. Suspendisse ut gravida augue. Maecenas eu ultrices ex. Nullam purus ipsum, suscipit et ligula nec, ultricies ullamcorper enim. Integer laoreet iaculis magna sit amet malesuada.',
+		autor: 'Дарт Вейдер',
+		hasButton: false,
+		color: 'red',
+
+	},
+	{
+		title: 'Заголовок 2',
+		text: 'Nunc viverra tortor eget elementum tempor. Aenean tincidunt mauris sed pulvinar finibus. Nulla vehicula urna a ligula ullamcorper, nec malesuada mauris feugiat. Praesent dui ante, ultricies a lobortis facilisis, pretium id urna. Nullam quis efficitur lectus. Duis consequat ante nunc, a congue lectus congue nec. Mauris fringilla molestie nisl eu bibendum.',
+		autor: 'Гендальф',
+		hasButton: true,
+		color: 'green',
+	},
+	{
+		title: 'Заголовок 3',
+		text: 'Quisque posuere eros et risus tristique accumsan. Curabitur eu consequat est. Etiam eleifend maximus dolor, sit amet cursus risus luctus et. Nunc interdum, tellus vel vestibulum luctus, lacus eros luctus dui, ut vulputate metus metus non quam. Pellentesque efficitur justo at turpis pharetra bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc vitae arcu mollis, volutpat nunc sed, molestie leo. Donec sit amet erat fringilla sem sodales bibendum eu nec mauris. Suspendisse ut elit erat.',
+		autor: 'Тони Старк',
+		hasButton: false,
+		color: 'yellow',
+	}
+];
+
+function createCardBoxes() {
+	let html = '';
+	let button = `<div style="margin-left: 8px">
+						<button>Подробнее</button>
+					</div>`;
+
+	for (const box of boxes) {
+		html += `
+		<div class="box-container" onmouseenter="mouseEvent(this, true)" onmouseleave="mouseEvent(this)">
+			<div>
+				<div class="box-title">
+					${box.title}
+				</div>
+
+				<div class="box-content ${box.color}">
+					${box.text}
+				</div>
+			</div>
+
+			<div class="box-autor">
+				<div>
+					Автор :
+				</div>
+				<div class="autor">
+					${box.autor}
+				</div>
+				${hasButton(box.hasButton)}
+			</div>
+
+		</div>`;
+	}
+
+	function hasButton(box) {
+		if (box) {
+			return button;
+		}
+
+		return '';
+	}
+	$('#data_container').html(html);
+}
+
+
+function mouseEvent(el, event){
+	
+	// $(el).on('mouseenter', function(){
+	if(event){
+		$(el).addClass('size')
+	}else{
+		$(el).removeClass('size')
+	}
+
+ console.log(el);
+ console.log(event);
+}
+
+//типа ДЗ
+
+let snouden = {
+		age: 20, 	//$(".age").val(),
+		from: 'Moscow', 	//$(".from").val(),
+		texts: 'Text text', 	//$(".texts").val(),
+}
+
+
+function snoudenStyle(){
+	let SS = `
+		<div>${snouden.age}</div>
+		<div>${snouden.from}</div>
+		<div>${snouden.texts}</div>
+	`
+
+	$('#snoudenStyle').append(SS);
+}
+
+	console.log(snouden);
+
+
+
+
 //Добавляем хедер из масива
 let menuLinks = [
 	'Home',
@@ -246,12 +351,13 @@ let SumAcc = 0;
 				console.log (SumMyPorchases, 'No balans');
 			};	
 
-	$('#Telephone').append(SumMyPorchases);
+	$('#Telephone').append(SumMyPorchases.toFixed(2));
 
 };
 
 function delRezultTelepphone(){
 	$('#Telephone').empty()
+	$('#Telephone').html('Общая сумма покупки = ')
 }
 
 //Переключатель картинок ??
@@ -299,6 +405,8 @@ function toggleSidebar() {
 //функция "запуска страницы", всегда должна быть в конце!
 $(function(){
 	
+	createCardBoxes();
+
 	$('#menuLinks').append(generateMenuLinks ()); // Добавляет массив Create header в конец header
 
 	if (!localStorage.getItem('name')){
@@ -450,3 +558,5 @@ function ret(a){
 custom = ret(10);
 console.log (custom);
 */
+
+
