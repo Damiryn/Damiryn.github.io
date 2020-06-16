@@ -1,25 +1,25 @@
 //Объекты (карточки)
 const boxes = [{
-		title: 'Заголовок 1',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum nibh arcu, et luctus tellus vulputate molestie. Quisque fringilla hendrerit feugiat. Cras eu tellus sed nisl euismod euismod. Sed molestie, dui quis convallis ultrices, mi leo hendrerit enim, in facilisis elit augue in orci. Suspendisse ut gravida augue. Maecenas eu ultrices ex. Nullam purus ipsum, suscipit et ligula nec, ultricies ullamcorper enim. Integer laoreet iaculis magna sit amet malesuada.',
+		title: 'Стих 1',
+		text: 'Вкусный нежный холодок Так и просится в роток. Есть ванильный, шоколадный, Есть с клубничкой, мармеладный. Весь большой ассортимент Тает быстренько — в момент. Любят все давным-давно Лёд хрустящий — ЭСКИМО!',
 		autor: 'Дарт Вейдер',
 		hasButton: false,
 		color: 'red',
 
 	},
 	{
-		title: 'Заголовок 2',
-		text: 'Nunc viverra tortor eget elementum tempor. Aenean tincidunt mauris sed pulvinar finibus. Nulla vehicula urna a ligula ullamcorper, nec malesuada mauris feugiat. Praesent dui ante, ultricies a lobortis facilisis, pretium id urna. Nullam quis efficitur lectus. Duis consequat ante nunc, a congue lectus congue nec. Mauris fringilla molestie nisl eu bibendum.',
+		title: 'Стих 2',
+		text: 'Брат мороженое кушал, А меня совсем не слушал. Я прошу его: — Сережка!  Дай попробовать немножко! Тот ванильный аромат, Как прохладный водопад. Я мороженое очень Есть люблю и днем и ночью. — Дай разочек укусить — Я дам бантик поносить, У меня еще есть брошка… Ну, не жадничай, Сережка! Знаешь, как тебя люблю я?!. Хочешь, в щечку поцелую?',
 		autor: 'Гендальф',
 		hasButton: true,
 		color: 'green',
 	},
 	{
-		title: 'Заголовок 3',
-		text: 'Quisque posuere eros et risus tristique accumsan. Curabitur eu consequat est. Etiam eleifend maximus dolor, sit amet cursus risus luctus et. Nunc interdum, tellus vel vestibulum luctus, lacus eros luctus dui, ut vulputate metus metus non quam. Pellentesque efficitur justo at turpis pharetra bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc vitae arcu mollis, volutpat nunc sed, molestie leo. Donec sit amet erat fringilla sem sodales bibendum eu nec mauris. Suspendisse ut elit erat.',
+		title: 'Стих 3',
+		text: 'Белый пломбир, словно горсточка снега. Сладкого снега – упавшего с неба. Будто бы феи в снежки там играли. И в мой стаканчик снежинки бросали. Так, что с мороженым всё мне понятно. Главное, кушать его так приятно.',
 		autor: 'Тони Старк',
 		hasButton: false,
-		color: 'yellow',
+		color: 'blue',
 	}
 ];
 
@@ -75,31 +75,59 @@ function mouseEvent(el, event){
 		$(el).removeClass('size')
 	}
 
- console.log(el);
- console.log(event);
+	// //if(this){
+	// 	$(el).addClass('size')
+	// }else{
+	// 	$(el).removeClass('size')
+	// }
+
+ // console.log(el);
+ // console.log(event);
 }
+
+
 
 //типа ДЗ
 
-let snouden = {
-		age: 20, 	//$(".age").val(),
-		from: 'Moscow', 	//$(".from").val(),
-		texts: 'Text text', 	//$(".texts").val(),
-}
-
+let snouden = {}
+let i = 0;
 
 function snoudenStyle(){
+	let name = $('.name').val();
+	snouden.name = name;
+	let from = $('.from').val();
+	snouden.from = from;
+	let age = $('.age').val();
+	snouden.age = age;
+	let texts = $('.texts').val();
+	snouden.texts = texts;
+
+
 	let SS = `
-		<div>${snouden.age}</div>
+		<div id="snowdenBox_${i}" class="snowdenBox">
+		<span class="close">&times;</span>
+		<div>${snouden.name}</div>
 		<div>${snouden.from}</div>
+		<div>${snouden.age}</div>
 		<div>${snouden.texts}</div>
-	`
+		</div>
+		`
+		i++;
 
-	$('#snoudenStyle').append(SS);
-}
+	$('#snoudenStyleBox').append(SS);
+	
 
+	let close = $('#snowdenBox_' + i);		//??
+	
+	$('.close').on('click', function(){						
+		$(close).css('background', 'red');
+		console.log('Work It');		
+	});
+
+	console.log(close);
+	console.log(i);
 	console.log(snouden);
-
+}
 
 
 
@@ -287,7 +315,7 @@ function createPopup(){
 	console.log('Popup Window');
 	
 	let container = document.createElement('div');
-	let textModal = prompt('Дай текст')
+	let textModal = prompt('Как тебя зовут?')
 	
 	let id = 'modal_' + modalCounter;
 
@@ -295,8 +323,12 @@ function createPopup(){
 	container.setAttribute('id', id) // id="modal_0"
 	container.innerHTML = `
 		<div class="modal-content">
-   		 	<span class="close">&times;</span>
-    		<p>${textModal}</p>								
+   		 	<div class="modal_text">
+    		<p>${textModal}</p>		
+    		</div>						
+			<div class="modal_button">
+   		 	<span class="close">Понятно</span>
+   		 	</div>
   		</div>`;
 	
 	console.log(container);
@@ -306,7 +338,7 @@ function createPopup(){
 	$('#modals').html(container);
 	container.style.display = 'flex';
 
-	let closeButton = $('#' + id).children().children('span');
+	let closeButton = $('#' + id).children().children().children('span');
 	
 	$(closeButton).on('click', function(){						//удаляем окно
 		document.getElementById(id).remove(); 			
@@ -404,7 +436,12 @@ function toggleSidebar() {
 
 //функция "запуска страницы", всегда должна быть в конце!
 $(function(){
-	
+
+	$('.input_button').on('click', function(){ 		//Доб. элементов объекта на страницу
+	snoudenStyle()
+	});
+
+
 	createCardBoxes();
 
 	$('#menuLinks').append(generateMenuLinks ()); // Добавляет массив Create header в конец header

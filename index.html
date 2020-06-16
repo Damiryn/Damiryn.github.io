@@ -46,20 +46,25 @@
 					</div>
 
 					<div class="text">
-						<div>Здесь должн быть текст, много текста, но его не будет так как:</div>
-						<ul class="items1">
-							<li>нет идей</li>
-							<li>нет опыта</li>
-							<li><i>нет</i> <b>Кекса</b></li>
-							<li>Тест</li>
-							<li>Текст</li>
-							<li>Тест текст</li>
-						</ul>
-						<button>Поменять цвета</button>
-						<button>Вернуть как было</button>
+
+						<div class="textTop">
+							<div>
+							<div>Какое бывает мороженное:</div>
+							<ul class="items1">
+								<li>Ванильное</li>
+								<li>Клубничное</li>
+								<li>Шоколадное</li>
+								<li><i>С грецким</i> <b>орехом</b></li>
+								<li>Фисташковое</li>
+								<li>Карамельное</li>
+								<li>Радужное</li>
+							</ul>
+							<button>Поменять цвета</button>
+							<button>Вернуть как было</button>
+							</div>
 
 							<div id="button">
-								<p>Вот так! А теперь к кнопкам.</p><br>
+								<p>Просто понажимай. Половина из них не работает.</p><br>
 								<button >Увеличить</button>
 								<button >Уменьшить</button>
 								<button >ПРОВЕРКА</button><br>
@@ -69,25 +74,35 @@
 								<button id="HideButton">Скрыть</button>
 								<button id="createPopup">Показать окно</button>
 							</div>
+						</div>
 
 							<div id="calculator">
-									<p>Калькултор телефонов</p>
+									<p>Калькултор мороженки</p>
 								<div id="telItems">
 									<input id="bank_balans" type="number" placeholder="Сколько у тебя денег?"><br>
-									<input id="rate_tel" type="number" placeholder="Сколько стоит телефон?"><br>
-									<input id="rate_acc" type="number" placeholder="Сколько стоит аксессуар?"><br>
+									<input id="rate_tel" type="number" placeholder="Сколько стоит мороженное?"><br>
+									<input id="rate_acc" type="number" placeholder="Сколько стоит сироп?"><br>
 									<input type="submit" value="Рассчитать" onclick="SummaTell()"> 
 								</div>
 									<p id="Telephone">Общая сумма покупки = </p>
 									<input type="submit" value="Удаление результата" onclick="delRezultTelepphone()">					
 							</div>
 
+							<div id="iDontKnowThis">
+								<div id="modals"></div>
+									<div id="General">
+										<div class="mr-5">Hello, how are you?</div>
+										<div id='Value'></div>
+									</div>
+								<p>Add List</p>
+								<ul id="itemlist"></ul>
+							</div>
 					</div>
 
 
 					<div id="Tasks">
-						<h2>Ваши отзывы</h2>
-						<input id="addTasks" type="comment" placeholder="Текст отзыва"><br>
+						<h2>Какое любишь ты?</h2>
+						<input id="addTasks" type="comment" placeholder="Ответ пиши сюда"><br>
 						<input id="buttonTasks" type="submit" value="Оставь отзыв" onclick="addTasks()">
 						<div id="newTasks"></div>
 					</div>
@@ -99,30 +114,17 @@
 
 		
 		<div class="contentButton">
-			
-			<!-- Zadacha -->
-			
+						
 		</div>
 
-
-		<div id="iDontKnowThis">
-			<div id="modals"></div>
-
-			<div id="General">
-				<div class="mr-5">Hello, how are you?</div>
-				<div id='Value'></div>
-			</div>
-
-			<ul id="itemlist"></ul>
-		</div>
 	</div>
 			
 
 
 			<div id="toggleImage">
-				<img class="changeImg" src="./image/Peng.jpg" width="250px" height="200px" onclick="addImage()">
-				<img class="changeImg" src="./image/skyearth.jpg" width="250px" height="200px">
-				<img class="changeImg" src="./image/orangerock.jpg" width="250px" height="200px">
+				<img class="changeImg" src="./image/pinkicecream.jpg" width="250px" height="200px" onclick="addImage()">
+				<img class="changeImg" src="./image/manyicecream.jpg" width="250px" height="200px">
+				<img class="changeImg" src="./image/yellowicecream.png" width="250px" height="200px">
 			</div>
 				<div id="imagecontainer"></div>
 
@@ -142,7 +144,13 @@
 
 
 			<div id="snoudenStyle">
-				<input type="submit" onclick="snoudenStyle()">
+				<h2>Оставь свой след!</h2>
+				<input class="name" type="comment" placeholder="Как тебя зовут?">
+				<input class="from" type="comment" placeholder="Откуда ты?">
+				<input class="age" type="number" placeholder="Сколько тебе лет?">
+				<input class="texts" type="comment" placeholder="Напиши о себе.">
+				<button id="input_button" class="input_button">Добавить</button>
+				<div id="snoudenStyleBox"></div>
 			</div>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum consequat ex et aliquet. Vestibulum bibendum mattis hendrerit. Donec a porttitor lectus. Praesent eu lectus condimentum, facilisis sem sit amet, aliquet urna. Sed malesuada diam leo, at gravida lacus congue in. Donec sodales nec nisi non ornare. Suspendisse nec pulvinar ante. Duis mattis mi leo, vel ullamcorper ante placerat ac. Maecenas consectetur ante eget ex dictum scelerisque et eu metus. Aenean eget ullamcorper nibh, tempor hendrerit lorem. Sed pretium felis in ex sagittis tempus.
@@ -153,7 +161,6 @@
 			</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum consequat ex et aliquet. Vestibulum bibendum mattis hendrerit. Donec a porttitor lectus. Praesent eu lectus condimentum, facilisis sem sit amet, aliquet urna. Sed malesuada diam leo, at gravida lacus congue in. Donec sodales nec nisi non ornare. Suspendisse nec pulvinar ante. Duis mattis mi leo, vel ullamcorper ante placerat ac. Maecenas consectetur ante eget ex dictum scelerisque et eu metus. Aenean eget ullamcorper nibh, tempor hendrerit lorem. Sed pretium felis in ex sagittis tempus.
 			</p>	
-
 
 	<div class="footer">Подвал</div>
 

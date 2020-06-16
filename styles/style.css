@@ -167,14 +167,18 @@ img {
 	border-radius: 50px;
 }
 
+.textTop{
+	display: flex;
+    justify-content: space-evenly;
+}
+
 .text{
-	height: 1000px;
-	width: 700px;
+	height: 900px;
+	width: 1000px;
 	font-size: 20px;
 	vertical-align: top;
 	color: black;
 	padding: 10px;
-	background: white;
 	align-self: end;
 
 }
@@ -274,6 +278,8 @@ img {
 #calculator{
 	font-size: 20px;
 	text-align: center;
+	font-family: comic sans ms;
+	margin-bottom: 20px;
 }
 
 #telItems input{
@@ -288,7 +294,7 @@ img {
 }
 
 #calculator input{
-	width: 180px;
+	width: 200px;
 	border-width: 2px;
     border-style: outset;
     border-color: rgb(118, 118, 118);
@@ -302,11 +308,28 @@ img {
 	height: 40px;
 }
 
+.text > #iDontKnowThis{
+	padding: 10px;
+	/*width: 500px;*/
+}
 
 #iDontKnowThis{
 	display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    border-radius: 14px;
+    background-color: #add9fe;
+    color: black;
+    padding: 7px;
+    text-decoration: none;
+    border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+    font-size: 16px;
+    font-family: comic sans ms;
+    margin: 2px;
 }
 
 
@@ -403,19 +426,40 @@ i + b {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-image: url(../image/hello.png);
+  border-radius: 64px;
+  background-size: cover;
+  background-position: center center;
+
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 25%; /* Could be more or less, depending on screen size */
 }
+
+.modal_text{
+	display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 80%;
+    font-size: 100px;
+}
+
+.modal_button{
+	display: flex;
+    justify-content: center;
+     height: 24%; 
+    align-items: flex-end;
+}
+
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: #fff;
   float: right;
-  font-size: 28px;
+  font-size: 23px;
   font-weight: bold;
+
 }
 
 .close:hover,
@@ -493,14 +537,15 @@ i + b {
     border: 1px solid #e7e8ea;
     justify-content: space-between;
     transition: 1s;
+   
 }
 
 .box-container.size {
     margin: 30px;
-    width: 500px;
-    min-height: 700px;
+    width: 450px;
+    min-height: 650px;
     background: pink;
-    box-shadow: 20px 40px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -510,6 +555,7 @@ i + b {
     justify-content: space-between;
     transition: 1s;
     transform: scale(1.1);
+
 }
 
 
@@ -561,3 +607,54 @@ i + b {
 .box-content.blue{
 	color: blue;
 }
+
+#snoudenStyle{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#snoudenStyle input{
+	width: 200px;
+	border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+	padding: 6px;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+#snoudenStyle button{
+	width: 200px;
+	border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+	padding: 6px;
+    border-radius: 10px;
+    margin: 3px;
+
+}
+
+.snowdenBox{
+	margin: 5px;
+    width: 200px;
+    min-height: 200px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #e7e8ea;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+#snoudenStyleBox{
+	display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    justify-content: center;
+}
+
