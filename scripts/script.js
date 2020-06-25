@@ -120,7 +120,7 @@ function snoudenStyle(){
 	let close = $('#snowdenBox_' + i);		//??
 	
 	$('.close').on('click', function(){						
-		$(close).css('background', 'red');
+		$(this).parent().replaceWith();
 		console.log('Work It');		
 	});
 

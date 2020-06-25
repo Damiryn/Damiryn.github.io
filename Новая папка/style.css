@@ -1,89 +1,212 @@
-/*
-style for project
-*/
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=PT+Sans+Narrow&display=swap');
+
+
+html {
+    height: 100%;
+}
+
+body {
+    height: inherit;
+}
 
 html,
 body {
     margin: 0;
 }
 
-* {
-    font-family: Roboto, sans-serif;
+.frame {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
 }
 
-.itemList {
+.header {
     display: flex;
-    align-items: center;
-    padding: 8px 16px;
+    min-height: 80px;
+    position: relative;
+}
+
+.header-fixed {
+    min-height: inherit;
+    background-color: khaki;
+    position: fixed;
+    display: flex;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    display: flex;
+    min-height: 300px;
+    /* border: 1px solid #333; */
+    margin-bottom: 30px;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.flex-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+
+.logo-title {
+    font-size: 50px;
+    line-height: 56px;
+    color: #fff;
+    font-family: 'Balsamiq Sans';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#block_image {
+    background-image: url('https://149366088.v2.pressablecdn.com/wp-content/uploads/2019/09/19.10-ermine-wallpaper.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: content-box;
+    position: sticky;
+    top: 80px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    justify-content: center;
+}
+
+.cart {
+    min-width: 250px;
+    min-height: 250px;
+    max-width: 250px;
+    max-height: 250px;
+    padding: 15px;
+    display: flex;
+    margin: 12px;
+    /* border: 1px solid #333; */
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+
+}
+
+#cart1 {
+    background-image: url('https://images4.alphacoders.com/936/936378.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cart2 {
+    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/940586530515504757/CDDE77CB810474E1C07B945E40AE4713141AFD76/');
+    background-position: -218px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cart3 {
+    background-image: url('https://images3.alphacoders.com/105/1052299.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cart4 {
+    background-image: url('https://wallpapershome.ru/images/wallpapers/poligon-2560x1440-4k-hd-3d-fon-241.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.image {
+    background-image: url('https://storage-asset.msi.com/global/picture/wallpaper/wallpaper_15855579855e81b1e1c5919.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.margin {
+    margin: 10px;
+}
+
+.description {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.margin-top {
+    margin-top: 12px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content>.others {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 0;
+    box-sizing: border-box;
+}
+
+.others>* {
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+.footer-content>.others>*:not(:last-child) {
+    margin-right: 16px;
+    border-right: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+.footer {
+    padding: 25px;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    min-height: 400px;
+    max-height: 400px;
+    background-color: #333;
 }
 
 .button {
     padding: 8px 16px;
-    outline: none;
+    box-sizing: border-box;
+    background-color: lightblue;
     border-radius: 4px;
-}
-
-.delete {
-    border-radius: 50%;
-    outline: none;
-    border: none;
-    background-color: lightgray;
-    color: #333;
-    width: 24px;
-    height: 24px;
-    box-sizing: border-box;
-    text-align: center;
-    vertical-align: middle;
-    margin: 0 5px;
-    transition: .2s ease-in-out;
-}
-
-.delete:hover {
-    transition: .2s ease-in-out;
-    background-color: gray;
-    color: #fff;
-}
-
-.target {
+    outline: 0;
+    border: 0;
+    transition: .3s ease-in-out;
     cursor: pointer;
-    transition: color .2s ease-in-out;
+    font-family: 'Balsamiq Sans';
 }
 
-.header {
-    height: 60px;
-    width: 100%;
-    position: relative;
-}
-
-.fixed-position {
-    height: inherit;
-    background: rgba(0, 0, 0);
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.button:hover {
+    background-color: mediumpurple;
+    transition: .3s ease-in-out;
     color: #fff;
-    font-size: 18px;
-    line-height: 21px;
-    padding: 8px 16px;
-    box-sizing: border-box;
 }
 
-.item-link {
-    text-decoration: none;
-    color: inherit;
-    transition: .2s ease-in-out;
-}
-
-.item-link:not(:last-child) {
-    margin-right: 8px;
-}
-
-.avatar {
-    width: 48px;
-    height: 48px;
-    box-sizing: border-box;
-    background-color: #fff;
-    border-radius: 50%;
+button.button:not(:last-of-type) {
+    margin-right: 12px;
 }

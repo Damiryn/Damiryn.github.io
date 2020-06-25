@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
 
-	<head>
-		<!-- Подключение стилей -->
-		<link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <!-- Подключение скриптов-->
+    <script type="text/javascript" src="./scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="./scripts/script.js"></script>
 
-		<!-- Подключение скриптов-->
-		<script type="text/javascript" src="./scripts/jquery-3.3.1.js"></script>
-		<script type="text/javascript" src="./scripts/script.js"></script>
+    <!-- Название сайта -->
+    <title>Мой сайт</title>
+  </head>
 
-		<!-- Название сайта -->
-		<title>My first project</title>
-	</head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <div class="header-fixed"></div>
+      </div>
 
-	<body>
-		<div class="header">
-			<div class="fixed-position">
+      <div class="content">
+        <div id="block_image" class="block">
+          <div class="logo-title">
+            Hello World
+          </div>
+        </div>
 
-				<div id="menuLinks"></div>
+        <div class="block flex-horizontal flex-between flex-wrap">
+          <div id="cart1" class="cart"></div>
+          <div id="cart2" class="cart"></div>
+          <div id="cart3" class="cart"></div>
+          <div id="cart4" class="cart"></div>
+        </div>
 
-				<div id="avatarFrame">
+        <div class="block flex-horizontal flex-between">
+          <div class="cart image"></div>
 
-				</div>
-			</div>
-		</div>
+          <div class="flex-vertical margin">
+            <div class="description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec
+              nulla finibus, posuere metus vel, auctor ligula. Mauris interdum
+              risus sed turpis suscipit, id egestas libero laoreet. Ut et
+              gravida purus, quis ultricies lorem. Vivamus ac lectus semper,
+              sagittis nisi tempor, interdum turpis. Aliquam a sem felis.
+              Vestibulum varius tincidunt accumsan. Morbi ac diam semper,
+              sodales nulla fermentum, cursus mi. Phasellus congue velit tortor,
+              ac efficitur mi lacinia non.
+            </div>
 
-		<img src="./assets/2f70511e8fcca6af5b1e2949035641b1.jpg">
+            <div class="flex-horizontal margin-top">
+              <button class="button">Поделиться</button>
+              <button class="button">Сохранить к себе</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-		<h1>Tutotrial of JavaScript and HTML/CSS by Maolink</h1>
+      <div class="footer">
+        <div class="icons-group"></div>
 
-		<p>
-			Привет всем, мои дорогие друзья, и это уроки по созданию лендинга
-		</p>
+        <div class="footer-content">
+          <div class="others">
+            <div>Конфиденциальное соглашение</div>
+            <div>Пользовательское соглашение</div>
+            <div>Какой-то текст</div>
+          </div>
 
-		<button class="button" onclick="onclickButton()">
-			Проверка увеличения или уменьшения
-		</button>
+          <div class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec
+            nulla finibus, posuere metus vel, auctor ligula. Mauris interdum
+            risus sed turpis suscipit, id egestas libero laoreet. Ut et gravida
+            purus, quis ultricies lorem. Vivamus ac lectus semper, sagittis nisi
+            tempor, interdum turpis. Aliquam a sem felis. Vestibulum varius
+            tincidunt accumsan. Morbi ac diam semper, sodales nulla fermentum,
+            cursus mi. Phasellus congue velit tortor, ac efficitur mi lacinia
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-		<button class="button" onclick="addElement()">Добавить элемент</button>
-
-		<p class="list-flex">
-			Список
-		</p>
-
-
-		<ul id="itemList"></ul>
-
-		<div class="footer"></div>
-	</body>
-
+    <div class="shadowRoot"></div>
+  </body>
 </html>
