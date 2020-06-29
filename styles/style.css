@@ -2,6 +2,10 @@ html, body {
     margin: 0;
 }
 
+iframe{
+  display: none;
+}
+
 * {
 	outline: none;
 	text-decoration: none;
@@ -188,7 +192,16 @@ img {
 }
 
 .text button{
-	text-align: center;
+	 text-align: center;
+    border-radius: 14px;
+    background-color: #add9fe;
+    color: black;
+    padding: 3px;
+    font-size: 14px;
+
+}
+.text a{
+   text-align: center;
     border-radius: 14px;
     background-color: #add9fe;
     color: black;

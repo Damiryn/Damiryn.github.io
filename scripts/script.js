@@ -383,7 +383,7 @@ let SumAcc = 0;
 				console.log (SumMyPorchases, 'No balans');
 			};	
 
-	$('#Telephone').append(SumMyPorchases.toFixed(2));
+	$('#Telephone').html('Общая сумма покупки = ' + SumMyPorchases.toFixed(2));
 
 };
 
@@ -434,9 +434,58 @@ function toggleSidebar() {
 // }
 
 
+
+function frameOnLoad() { // Resize
+    const iframe = document.getElementById('frameBeerContent');
+    const frameDocument = iframe.contentWindow.document;
+    const html = frameDocument.getElementsByTagName('html')[0];
+    $(iframe).css('min-height', html.offsetHeight);
+}
+
+
+function showFrame(path) {
+    const iframe = document.getElementById('frameBeerContent');
+
+    iframe.src = 'landing/' + path + '.html';
+
+    iframe.contentWindow.onload = () => {
+        console.log('Frame on load')
+        frameOnLoad();
+    }
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    iframe.contentWindow.onload();
+}
+
+
+
 //функция "запуска страницы", всегда должна быть в конце!
 $(function(){
 
+
+	// Получаем путь из URL браузера, и по нему отрисовываем страницу. 
+    // URL должен содержать формат ?ID=id
+    const path = window.location.search.replace('?', '');
+    const gettingPath = path.split('=')[1];
+
+    if (window.location.search) {
+        // Показываем нужный фрейм
+        showFrame(gettingPath);
+    } else {
+        const iframe = document.getElementById('frameBeerContent');
+        iframe.contentWindow.onload = () => {
+            console.log('Frame on load')
+            frameOnLoad();
+        }
+    }
+
+
+
+	
 	$('.input_button').on('click', function(){ 		//Доб. элементов объекта на страницу
 	snoudenStyle()
 	});

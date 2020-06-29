@@ -28,7 +28,7 @@ body {
 
 .header-fixed {
     min-height: inherit;
-    background-color: rgba(250, 225, 2, 0.7);
+    background-color: rgba(250, 225, 2);
     position: fixed;
     display: flex;
     width: 100%;
@@ -46,10 +46,14 @@ button{
 	background-color: rgb(250, 225, 2);
 	border: 0;
 	outline: 0;
+	color: white;
+	font-family: comic sans ms;
+	font-size: 18px;
+	text-align: center;
 }
 
 .header-button > button:not(:last-child){
-	border-right: 1px solid black;	
+	border-right: 1px solid white;	
 }
 
 /*.header-button > button{
@@ -80,14 +84,13 @@ button{
     color: white;
     font-weight: bold;
     font-size: 50px;
+    font-family: comic sans ms;
 }
-
 .author-content{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
 .author{
 	display: flex;
     justify-content: center;
@@ -106,7 +109,7 @@ button{
 
 
 
-.beer-block{
+.content-beer-block{
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -119,7 +122,8 @@ button{
 	flex-direction: column;
 }
 .description{
-    display: flex;  
+    display: flex;
+    justify-content: center;  
 }
 .cart{
     padding: 100px;
@@ -131,8 +135,9 @@ button{
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 10px 50px 10px 350px;
+    margin: 10px 50px 10px 10px;
     border-radius: 20px;
+    width: 100px;
 }
 
 #cart2{
@@ -140,26 +145,29 @@ button{
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 10px 350px 10px 50px;
+    margin: 10px 10px 10px 50px;
     border-radius: 20px;
+    width: 100px;
 }
 
 #description1{
-	margin: 10px 200px 10px 200px;
+	margin: 10px 10px 10px 10px;
 	background-color: rgba(250, 225, 2, 0.5);
 	border-radius: 20px; 
 	text-align: center;
     align-items: center;
     display: flex;
+    width: 700px;
 }
 
 #description2{
-	margin: 10px 200px 10px 200px;
+	margin: 10px 10px 10px 10px;
 	background-color: rgba(250, 225, 2, 0.5);
 	border-radius: 20px;
 	text-align: center;
     align-items: center;
     display: flex;
+    width: 700px;
 }
 
 .separator{
@@ -182,10 +190,10 @@ button{
 .image{
 	padding: 10px;
 	margin: 10px;
-	min-width: 200px;
-	min-height: 200px;
-	max-width: 200px;
-	max-height: 200px;
+	min-width: 300px;
+	min-height: 300px;
+	max-width: 300px;
+	max-height: 300px;
 }
 
 #image1{
@@ -193,24 +201,28 @@ button{
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 30px;
 }
 #image2{
 	background-image: url('../beerbotle.jpg');
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 30px;
 }
 #image3{
 	background-image: url('../meat.jpg');
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 30px;
 }
 #image4{
 	background-image: url('../beerbotle.jpg');
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 30px;
 }
 
 
@@ -247,5 +259,76 @@ button{
     min-height: 400px;
     max-height: 400px;
     background-color: #333;
+   /* display: none;*/
 }
 
+
+
+.age{
+	display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(255,255,255,0.9);
+}
+.age-content{
+    margin: 15% auto;
+    padding: 20px;
+}
+.age_text{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    color: #00d869;
+    font-family: comic sans ms;
+}
+.age_text p{
+	margin-bottom: 0;
+	font-weight: bold;
+}
+.age_text h6{
+	font-size: 30px;
+    color: rgb(250, 225, 2);
+    margin: 24px 0;
+}
+
+.age_button{
+	display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: comic sans ms;
+}
+
+.buttonYes{
+	color: #fff;
+    float: right;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250, 225, 2);
+    margin-right: 30px;
+}
+.buttonNo{
+	color: #fff;
+    float: right;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #777;
+}
