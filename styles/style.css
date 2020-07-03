@@ -201,12 +201,22 @@ img {
 
 }
 .text a{
-   text-align: center;
+    text-align: center;
     border-radius: 14px;
-    background-color: #add9fe;
+    background-color: red;
     color: black;
-    padding: 3px;
-    font-size: 14px;
+    padding: 7px;
+    text-decoration: none;
+    border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+    font-size: 16px;
+    font-family: comic sans ms;
+    margin: 2px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
 
 }
 

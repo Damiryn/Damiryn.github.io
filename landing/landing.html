@@ -10,11 +10,11 @@
 		<div class="frame">
       		<div class="header">
         		<div class="header-fixed">
-        			<div class="header-button">
-        				<button >Кнопка 1</button>
-        				<button >Кнопка 2</button>
-        				<button >Кнопка 3</button>
-        				<button >Кнопка 4</button>
+        			<div class="header-button" id="headerButton">
+        				<a href="#film" onmouseenter="headerMouseEvent(this, true)" onmouseleave="headerMouseEvent(this)">Film</a>
+        				<a href="#imageBlock" onmouseenter="headerMouseEvent(this, true)" onmouseleave="headerMouseEvent(this)">Our best friends</a>
+        				<a href="#imageSlider" onmouseenter="headerMouseEvent(this, true)" onmouseleave="headerMouseEvent(this)">Boooooobs</a>
+        				<!-- <a href="film" onmouseenter="headerMouseEvent(this, true)" onmouseleave="headerMouseEvent(this)">Кнопка 4</a> -->
         			</div>
         		</div>
         	</div>
@@ -69,13 +69,42 @@
 				        </div>
 				</div>
 
-			<div class="separator">Наши лучшие друзья:</div>
+			<div id="separator">
+			<div class="separator">Film</div>
+			</div>
+			<div class="film" id="film">
+				<div class="coronaExtra">
+					<div></div>
+					<iframe width="760" height="375" src="https://www.youtube.com/embed/9d3sgv23QtQ?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 
-	        <div class="image-block">
+				<div class="haniken">
+					<div></div>
+					<iframe width="760" height="375" src="https://www.youtube.com/embed/S1ZZreXEqSY?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<!--тут будут фрайме видосы с ютуб
+
+			 https://www.corona.com/en/home.html#products
+				ютуб видео от короны, + найти рекламу хайникена -->
+			<div id="separator">
+			<div class="separator">Our best friends:</div>
+			</div>
+	        <div class="image-block" id="imageBlock">
 	        	<div id="image1" class="image">Image</div>
 	        	<div id="image2" class="image">Image</div>
 	        	<div id="image3" class="image">Image</div>
 	        	<div id="image4" class="image">Image</div>
+	        </div>
+
+	        <div id="separator">
+	        <div class="separator">Boooooobs:</div>
+	    	</div>
+	        <div class="image-slider" id="imageSlider">
+	        	<button onclick="back()">туды</button>
+	        	<img id="image" class="image" src="./boobs/boobs1.jpg">
+	        	<button onclick="next()">сюды</button>
 	        </div>
 
 
@@ -118,18 +147,15 @@
 
         <div class="footer-content">
           <div class="others">
-          	<div>Конфиденциальное соглашение</div>
-            <div>Пользовательское соглашение</div>
-            <div>Какой-то текст</div>
+          	<div>ООО "Сайт любителей пивка и сисек"</div>
           </div>
         </div>
+      	<!-- <div id="up">Вверх</div> -->
       </div>
     </div>
 		
 		<div class="shadowRoot">
-
 			<div id="ageCheck"></div>
-
 		</div> <!-- Место для всплывашек, того что изначально не видно на сайте -->
 	</body>
 </html>

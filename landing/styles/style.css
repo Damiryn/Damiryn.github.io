@@ -22,7 +22,7 @@ body {
 
 .header {
     display: flex;
-    min-height: 80px;
+    min-height: 30px;
     position: relative;
 }
 
@@ -37,10 +37,11 @@ body {
 
 .header-button{
 	display: flex;
-	/*align-items: center;*/
+	justify-content: center;
+
 }
 
-button{
+/*button{
 	width: 300px;
 	text-align: left;
 	background-color: rgb(250, 225, 2);
@@ -50,9 +51,39 @@ button{
 	font-family: comic sans ms;
 	font-size: 18px;
 	text-align: center;
+}*/
+a{
+    width: 300px;
+    text-align: left;
+    background-color: rgb(250, 225, 2);
+    border: 0;
+    outline: 0;
+    color: white;
+    font-family: comic sans ms;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+a.active{
+    width: 300px;
+    text-align: left;
+    background-color: #00FF00;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-family: comic sans ms;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
 }
 
-.header-button > button:not(:last-child){
+.header-button > a:not(:last-child){
 	border-right: 1px solid white;	
 }
 
@@ -68,14 +99,13 @@ button{
     background-size: cover;
     box-sizing: content-box;
     position: sticky;
-    top: 80px;
+    top: 30px;
     left: 0;
     z-index: -1;
     width: 100%;
     height: auto;
     min-height: 600px;
     justify-content: center;
-    opacity: 0.8;
     display: flex;
 }
 .logo-title{
@@ -170,11 +200,72 @@ button{
     width: 700px;
 }
 
+.film{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.film > *{
+    margin: 10px;
+}
+
+.coronaExtra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.coronaContainer{
+    display: flex;
+    align-items: center;
+}
+.coronaExtra > div {
+    margin-right: 50px;
+    background-image: url('../hotpngcorona.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 300px;
+    min-height: 370px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.haniken{
+    display: flex;
+    align-items: center;
+}
+.haniken > div {
+    margin-right: 50px;
+    background-image: url('../hotpngheineken.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 300px;
+    min-height: 370px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#separator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 216, 105, 1);
+    height: 50px;
+
+}
 .separator{
     text-align: center;
     font-size: 25px;
     font-weight: bold;
-	/*background-color: rgba(250, 225, 2, 0.5);*/
+	background-color: rgba(250, 225, 2, 1);
+    border-radius: 25px;
+    height: 50px;
+    width: 95%;;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -224,6 +315,13 @@ button{
     background-size: cover;
     border-radius: 30px;
 }
+.image-slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 
 
@@ -316,9 +414,25 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #777;
+    margin-right: 30px;
+}
+
+.buttonYes.active{
+    color: #fff;
+    float: right;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(250, 225, 2);
     margin-right: 30px;
 }
+
 .buttonNo{
 	color: #fff;
     float: right;
@@ -331,4 +445,23 @@ button{
     align-items: center;
     justify-content: center;
     background-color: #777;
+}
+.buttonNo.active{
+    color: #fff;
+    float: right;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+}
+
+#up{
+    height: 50px;
+    width: 50px;
+    background-color: gray;
 }

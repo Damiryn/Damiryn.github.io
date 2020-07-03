@@ -467,25 +467,6 @@ function showFrame(path) {
 $(function(){
 
 
-	// Получаем путь из URL браузера, и по нему отрисовываем страницу. 
-    // URL должен содержать формат ?ID=id
-    const path = window.location.search.replace('?', '');
-    const gettingPath = path.split('=')[1];
-
-    if (window.location.search) {
-        // Показываем нужный фрейм
-        showFrame(gettingPath);
-    } else {
-        const iframe = document.getElementById('frameBeerContent');
-        iframe.contentWindow.onload = () => {
-            console.log('Frame on load')
-            frameOnLoad();
-        }
-    }
-
-
-
-	
 	$('.input_button').on('click', function(){ 		//Доб. элементов объекта на страницу
 	snoudenStyle()
 	});
@@ -539,7 +520,24 @@ $(function(){
 				console.log(text);
 			}
 		}
+
 	});
+
+	// Получаем путь из URL браузера, и по нему отрисовываем страницу. 
+    // URL должен содержать формат ?ID=id
+    const path = window.location.search.replace('?', '');
+    const gettingPath = path.split('=')[1];
+
+    if (window.location.search) {
+        // Показываем нужный фрейм
+        showFrame(gettingPath);
+    } else {
+        const iframe = document.getElementById('frameBeerContent');
+        iframe.contentWindow.onload = () => {
+            console.log('Frame on load')
+            frameOnLoad();
+        }
+    }
 });
 
 
