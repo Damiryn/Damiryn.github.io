@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="./scripts/jquery-3.3.1.js"></script>
+		<script src="./scripts/masonry.pkgd.min.js"></script>
+		<title>Test galarey </title>
+	</head>
+	<body>
+		<div id="container">
+  			<div class="item">
+  				<img src="./boobs/boobs2.jpg">
+  			</div>
+ 			<div class="item">
+ 				<img src="./boobs/boobs1.jpg">
+ 			</div>
+ 			<div class="item">
+  				<img src="./boobs/boobs3.jpg">
+  			</div>
+ 			<div class="item">
+ 				<img src="./boobs/boobs4.jpg">
+ 			</div>
+
+		</div>
+		<style type="text/css">
+			.item{
+				float: left;
+				width: 25%;
+				height: auto;
+				overflow: hidden;
+
+			}
+		</style>
+		<script type="text/javascript">
+			  $(document).ready(function(){ 
+				$('#container').masonry({
+			// указываем элемент-контейнер в котором расположены блоки для динамической верстки
+				  itemSelector: '.item',
+			// указываем класс элемента являющегося блоком в нашей сетке
+			          singleMode: false,
+			// true - если у вас все блоки одинаковой ширины
+				  isResizable: true,
+			// перестраивает блоки при изменении размеров окна
+				  isAnimated: true,
+			// анимируем перестроение блоков
+			          animationOptions: { 
+				      queue: false, 
+				      duration: 500 
+				  }
+			// опции анимации - очередь и продолжительность анимации
+				}); 
+			  });
+		</script>
+
+
+
+	</body>
+</html>

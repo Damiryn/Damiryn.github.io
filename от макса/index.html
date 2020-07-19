@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- Подключение стилей -->
+		<link rel="stylesheet" type="text/css" href="./styles/style.css">
+
+		<!-- Подключение скриптов-->
+		<script type="text/javascript" src="./scripts/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="./scripts/script.js"></script>
+
+		<!-- Название сайта -->
+		<title>My first project</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="fixed-position">
+				<div id="menuLinks"></div>
+				<div id="avatarFrame"></div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="content">
+				<h1>Tutotrial of JavaScript and HTML/CSS by <span id="userName"></span></h1>
+
+				<p>
+					Привет всем, мои дорогие друзья, и это уроки по созданию лендинга
+				</p>
+
+				<button class="button">
+					Проверка увеличения или уменьшения
+				</button>
+
+				<button class="button">
+					Добавить элемент
+				</button>
+
+				<button id class="button">
+					Записать новое значение
+				</button>
+
+				<div class="row" id="hideContainerRow">
+					<div class="mr-5">
+						Привет, рад тебя видеть
+					</div>
+
+					<div id="matherFuckerValue"></div>
+				</div>
+
+				<button id="hideButtonMatherFucker" class="button">
+					Скрыть
+				</button>
+
+
+				<button id="createPopup" class="button">
+					Показать всплывающее окно
+				</button>
+
+				<p class="list-flex">
+					Список
+				</p>
+
+				<ul id="itemList"></ul>
+
+
+				<div>
+					<input id="bank" type="number" placeholder="Сумма баланса">
+					<input id="phones" type="number" placeholder="Стоимость телефона">
+				</div>
+
+				<div>
+					<!-- <button id="calcSum" onclick="calcSum();">Расчитать</button> -->
+
+					<button id="calcSum">Расчитать</button>
+				</div>
+
+				<div class="footer"></div>
+
+
+				<div id="modals"></div>
+
+
+				<button onclick="toggleSidebar()">open sidenav</button>
+
+			</div>
+
+			<div id="mySidenav" class="sidenav">
+				<span class="closebtn" onclick="closeNav()">&times;</span>
+				<a href="#">About</a>
+				<a href="#">Services</a>
+				<a href="#">Clients</a>
+				<a href="#">Contact</a>
+			</div>
+		</div>
+	</body>
+
+</html>

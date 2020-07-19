@@ -184,7 +184,7 @@ function addTasks (){
 	let task = `
 			<div class="addTasks">
 				<div>${textTasks}
-				<button class="dilete" onclick="dellist(this.parentNode.parentNode)">x</button>
+				<button class="dileteButton" onclick="dellist(this.parentNode.parentNode)">x</button>
 				</div>
 			</div>`;
 
@@ -416,7 +416,6 @@ function addImage(){
 
 function toggleSidebar() { 
 	let f = $('.sideBar').toggleClass('open');
-	console.log(f);
 }	
 
 // onmouseenter="toggleImage(this, true)" onmouseleave="toggleImage(this)"

@@ -78,6 +78,22 @@ body{
 	font-family: comic sans ms;
 } 
 
+#menuLinks > a#exam{
+    background-color: red;
+    text-align: center;
+    border-radius: 14px;
+    color: black;
+    padding: 7px;
+    margin: 10px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+    font-size: 16px;
+  font-family: comic sans ms;
+
+}
+
 .avatar{
 	height: 60px;
 	width: 60px;
@@ -200,25 +216,6 @@ img {
     font-size: 14px;
 
 }
-.text a{
-    text-align: center;
-    border-radius: 14px;
-    background-color: red;
-    color: black;
-    padding: 7px;
-    text-decoration: none;
-    border-width: 2px;
-    border-style: outset;
-    border-color: rgb(118, 118, 118);
-    border-image: initial;
-    font-size: 16px;
-    font-family: comic sans ms;
-    margin: 2px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-
-}
 
 #Tasks{
 	text-align: center;
@@ -259,10 +256,17 @@ img {
 .addTasks{
 	border: 1px solid blue;
 	width: 200px;
-	height: 100px;
+	height: 50px;
 	background-color: #add9fe;
 	border-radius: 50px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dileteButton {
+    font-size: 13px;
+    background-color: #add9fe;
 }
 
 

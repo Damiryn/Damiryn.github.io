@@ -1,0 +1,45 @@
+/*Понравился сайт
+https://www.behance.net/gallery/79783099/v-ramkah-bazovogo-kursa-Skillbox-Ui-concept-Web?tracking_source=search_projects_recommended%7Cui%20beer
+*/
+
+// function frameOnLoad() { // Resize
+//     const iframe = document.getElementById('frameBeerContent');
+//     const frameDocument = iframe.contentWindow.document;
+//     const html = frameDocument.getElementsByTagName('html')[0];
+//     $(iframe).css('min-height', html.offsetHeight);
+// }
+// function showFrame(path) {
+//     const iframe = document.getElementById('frameBeerContent');
+
+//     iframe.src = 'landing/' + path + '.html';
+
+//     iframe.contentWindow.onload = () => {
+//         console.log('Frame on load')
+//         frameOnLoad();
+//     }
+
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     });
+
+//     iframe.contentWindow.onload();
+// }
+
+// //в загрзучную f
+//     // Получаем путь из URL браузера, и по нему отрисовываем страницу. 
+//     // URL должен содержать формат ?ID=id
+//     const path = window.location.search.replace('?', '');
+//     const gettingPath = path.split('=')[1];
+
+//     if (window.location.search) {
+//         // Показываем нужный фрейм
+//         showFrame(gettingPath);
+//     } else {
+//         const iframe = document.getElementById('frameBeerContent');
+//         iframe.contentWindow.onload = () => {
+//             console.log('Frame on load')
+//             frameOnLoad();
+//         }
+//     }
+

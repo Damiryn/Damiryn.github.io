@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html id="frameBeerContent">
+<html>
 <head>
 	<script src="./scripts/jquery-3.3.1.js"></script>
-	<script src="./scripts/script.js"></script>
+	<script type="text/javascript" src="./scripts/scripts.js"></script>
 	<link rel="stylesheet" type="text/css" href="./styles/style.css">
 	<title>My First </title>
 </head>
 	<body>
 		<div class="frame">
+	      		<div id="block_image" class="block">
+	          		<div class="logo-title">
+	            		Hello Beer
+	          		</div>
+	        	</div>
       		<div class="header">
         		<div class="header-fixed">
         			<div class="header-button" id="headerButton">
@@ -19,143 +24,181 @@
         		</div>
         	</div>
 
+        		
+        				
+
 
 
       <div class="content">
-
-        <div id="block_image" class="block">
-          <div class="logo-title">
-            Hello Beer
-          </div>
-        </div>
 
         <div class="content-beer-block">
 
 	        <div class="author-content">	
 	        	<div class="author">
-	        		<div>Здесь будет авторизация пользователя</div>
+	        		<div id="authorText">Пожалуйста авторизуйтесь</div>
+	        		<div id="authorLogin">
+	        		<input id="login" type="text" name="" placeholder="введите логин" maxlength="10">
+	        		<input id="password" type="password" name="" placeholder="введите пароль" maxlength="10">
+	        		<input id="authorButton" type="submit" name="" onclick="logIn()" onmouseenter="headerMouseEvent(this, true)" onmouseleave="headerMouseEvent(this)">
+	        		</div>
+	        		<div id="answer"></div>
 	        	</div>
 	        </div>
 
 
         		<div class="block-content">
 		        	 	
-		        	 	<div class="description">
+		        	 	<div class="cartBox">
 							<div id="cart1" class="cart"></div>
-			        	 	<div id="description1">
-					              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec
-					              nulla finibus, posuere metus vel, auctor ligula. Mauris interdum
-					              risus sed turpis suscipit, id egestas libero laoreet. Ut et
-					              gravida purus, quis ultricies lorem. Vivamus ac lectus semper,
-					              sagittis nisi tempor, interdum turpis. Aliquam a sem felis.
-					              Vestibulum varius tincidunt accumsan. Morbi ac diam semper,
-					              sodales nulla fermentum, cursus mi. Phasellus congue velit tortor,
-					              ac efficitur mi lacinia non.
-			            	</div>
+			        	 	<div class="description">
+			        	 		Heineken — нидерландская пивоваренная компания, крупнейшая в стране и вторая крупнейшая в мире (после Anheuser-Busch InBev). Штаб-квартира — в Амстердаме.
+			        	 		По состоянию на 2006 год компании принадлежало 130 пивоварен в более чем 65 странах. Помимо всемирно известных марок Heineken и Amstel, компания выпускает свыше 300 международных и локальных марок пива, среди которых Cruzcampo, Tiger, Żywiec, Birra Moretti, Murphy’s, Star и др.
+			        	 		Heineken — самый популярный экспортный пивной бренд компании. В Европе самыми продаваемыми пивными брендами являются Heineken и Amstel, также компании принадлежат такие известные бренды как Edelweiss, Zipfer, Gösser и т. п.
+			        	 	</div>
 			            </div>
 
-			            <div class="description">
-			             	<div id="description2">
-					              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec
-					              nulla finibus, posuere metus vel, auctor ligula. Mauris interdum
-					              risus sed turpis suscipit, id egestas libero laoreet. Ut et
-					              gravida purus, quis ultricies lorem. Vivamus ac lectus semper,
-					              sagittis nisi tempor, interdum turpis. Aliquam a sem felis.
-					              Vestibulum varius tincidunt accumsan. Morbi ac diam semper,
-					              sodales nulla fermentum, cursus mi. Phasellus congue velit tortor,
-					              ac efficitur mi lacinia non.
-				            </div>
+			            <div class="cartBox">
+			             	<div class="description">
+			             		Corona Extra — светлый лагер, производства мексиканской компании Grupo Modelo.
+			             		Долгое время Corona был крупнейшим из немногих независимых всемирных пивных брендов. В то время его дистрибуцией по всему миру эксклюзивно занималась корпорация Carlsberg. В 2013 году, после многолетних переговоров бренд был продан крупнейшему игроку на пивном рынке — Anheuser-Busch InBev.
+								Бренд Corona является одним из самых продаваемых брендов пива во всем мире. За пределами Мексики Corona обычно подается с долькой лайма или лимона в горлышке бутылки, чтобы добавить терпкости и аромата.
+			             	</div>
           					<div id="cart2" class="cart"></div>
 				        </div>
+
+				        <div class="cartBox">
+							<div id="cart3" class="cart"></div>
+			        	 	<div class="description">
+			        	 		Efes (Эфес) — торговая марка турецкого пива. Принадлежит пивоваренной корпорации Anadolu Efes — лидеру турецкого рынка пива, доля которого в объёмах продаж пива в Турции составляет 89 % (2009). Соответственно, популярнейший сорт пива торговой марки — пильзнер Efes Pilsen является самым продаваемым пивом Турции.
+			        	 		Пиво торговой марки Efes экспортируется на 60 внешних национальных рынков. Кроме того, пиво Efes производится в ряде зарубежных стран, в которых корпорация Anadolu Efes имеет собственные производственные предприятия, в частности в России, Казахстане, Грузии, Молдавии.
+			        	 		История Efes началась в 1969 году, когда пиво с таким названием начали выпускать две турецкие пивоварни, объединённые в группу компаний Efes Beverage Group. Торговая марка и компания-производитель получили своё название от древнегреческого города, остатки которого были найдены недалеко от современного турецкого города Измира, в котором располагается одна из пивоварен.
+			        	 	</div>
+			            </div>
 				</div>
 
-			<div id="separator">
-			<div class="separator">Film</div>
+			<div class="separator">
+			<div class="separator">Film:</div>
 			</div>
+			
 			<div class="film" id="film">
+
+					<div class="descriptionS">
+					    Пи́во — слабоалкогольный напиток, получаемый спиртовым брожением солодового сусла (чаще всего на основе ячменя) с помощью пивных дрожжей, обычно с добавлением хмеля. Содержание этилового спирта в большинстве сортов пива около 3,0—6,0 % об. (крепкое содержит, как правило, от 8,5 % до 14 % об., иногда также выделяют лёгкое пиво, которое содержит 1—2 % об., отдельно выделяют безалкогольное пиво, которое сюда не включают), сухих веществ (в основном углеводов) 7—10 %, углекислого газа 0,48—1,0 %.
+					    Пиво распространено во множестве стран мира и пользуется популярностью благодаря своим вкусовым качествам и аромату. Существует около тысячи сортов пива. Вкусовые характеристики разных видов могут кардинально различаться. 
+				    </div>
+
 				<div class="coronaExtra">
 					<div></div>
-					<iframe width="760" height="375" src="https://www.youtube.com/embed/9d3sgv23QtQ?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="215" src="https://www.youtube.com/embed/9d3sgv23QtQ?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 
 				<div class="haniken">
 					<div></div>
-					<iframe width="760" height="375" src="https://www.youtube.com/embed/S1ZZreXEqSY?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="215" src="https://www.youtube.com/embed/S1ZZreXEqSY?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+				<div class="efes">
+					<div></div>
+					<iframe width="560" height="215" src="https://www.youtube.com/embed/aavb91MTjyU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>
 
-			<!--тут будут фрайме видосы с ютуб
 
+			<!--тут будут фрайме видосы с ютуб
 			 https://www.corona.com/en/home.html#products
 				ютуб видео от короны, + найти рекламу хайникена -->
-			<div id="separator">
+				
+			<div class="separator">
 			<div class="separator">Our best friends:</div>
 			</div>
+			
 	        <div class="image-block" id="imageBlock">
-	        	<div id="image1" class="image">Image</div>
-	        	<div id="image2" class="image">Image</div>
-	        	<div id="image3" class="image">Image</div>
-	        	<div id="image4" class="image">Image</div>
+	        	<div class="imageseparator">
+		        	<div id="image1" class="image"></div>
+		        	<div id="image2" class="image"></div>
+		        	<div id="image3" class="image"></div>
+		        	<div id="image4" class="image"></div>
+	        	</div>
+	        	<div class="imageseparator">
+		        	<div id="image5" class="image"></div>
+		        	<div id="image6" class="image"></div>
+		        	<div id="image7" class="image"></div>
+		        	<div id="image8" class="image"></div>
+	        	</div>
+	        	<div class="imageseparator">
+		        	<div id="image9" class="image"></div>
+		        	<div id="image10" class="image"></div>
+		        	<div id="image11" class="image"></div>
+		        	<div id="image12" class="image"></div>
+	        	</div>
+
+	        
+
 	        </div>
 
-	        <div id="separator">
+
+	        <div class="separator">
 	        <div class="separator">Boooooobs:</div>
-	    	</div>
-	        <div class="image-slider" id="imageSlider">
-	        	<button onclick="back()">туды</button>
-	        	<img id="image" class="image" src="./boobs/boobs1.jpg">
-	        	<button onclick="next()">сюды</button>
+	        </div>
+
+	        	<div id="Boooooobs">
+	
+		        	<div class="descriptionS">
+						Женская грудь — две выпуклости на передней верхней части туловища, внутри которых находятся молочные железы, выделяющие грудное молоко для вскармливания младенцев. Немного ниже середины каждой груди, примерно на уровне четвёртого межрёберного промежутка или пятого ребра, на поверхности имеется небольшой значительно пигментированный кружок — ареола. В центре ареолы расположен грудной сосок, в котором находятся наружные окончания выводных протоков молочных желез, вследствие чего через него происходит выделение молока — лактация, начало которой обычно гормонально связано с периодом родов. Сосок обычно имеет розовато-коричневую окраску. 
+				    </div>
+		        <div class="image-slider" id="imageSlider">
+		        	<img id="image" src="./boobs/boobs1.jpg">
+			        <div id="button">
+				        <button onclick="back()" onmouseenter="headerMouseEvent(this, true)" onmouseleave="headerMouseEvent(this)">туды</button>
+				        <button onclick="next()" onmouseenter="headerMouseEvent(this, true)" onmouseleave="headerMouseEvent(this)">сюды</button>
+			        </div>
+		        </div>
+
+		        </div>
+        </div>
+
+
+
+    		<div class="separator">
+	        <div class="separator">THE END</div>
 	        </div>
 
 
-
-
-
-
-
-        
-        </div>
-
-        
-
-<!--         <div class="block flex-horizontal flex-between">
-          <div class="cart image"></div>
-
-          <div class="flex-vertical margin">
-            <div class="description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec
-              nulla finibus, posuere metus vel, auctor ligula. Mauris interdum
-              risus sed turpis suscipit, id egestas libero laoreet. Ut et
-              gravida purus, quis ultricies lorem. Vivamus ac lectus semper,
-              sagittis nisi tempor, interdum turpis. Aliquam a sem felis.
-              Vestibulum varius tincidunt accumsan. Morbi ac diam semper,
-              sodales nulla fermentum, cursus mi. Phasellus congue velit tortor,
-              ac efficitur mi lacinia non.
-            </div>
-
-            <div class="flex-horizontal margin-top">
-              <button class="button">Поделиться</button>
-              <button class="button">Сохранить к себе</button>
-            </div>
-          </div>
-        </div>
-      </div> -->
 
 
       <div class="footer">
-        <div class="icons-group"></div>
+      	<div class="footerHeader">
+	      	<div id="deleteFooter">x</div>
+	      	<div class="footerTitle">
+	      		<div class="iconTitleL"></div>
+	      		<p>ООО "Любители пивка и сисек"</p>
+	      		<div class="iconTitleR"></div>
+	      	</div>
+      	</div>
 
-        <div class="footer-content">
-          <div class="others">
-          	<div>ООО "Сайт любителей пивка и сисек"</div>
-          </div>
-        </div>
-      	<!-- <div id="up">Вверх</div> -->
+      	<div class="footerContact">
+      		<div class="addres">
+      			<div class="iconAddres"></div>
+				<p>Stadhouderskade 78, 1072 AE Amsterdam</p>      			
+      		</div>
+      		<div class="tellephone">
+      			<div class="iconTell"></div>
+				<p>+7 (495) 960-23-60</p>      			
+      		</div>
+      		<div class="email">
+      			<div class="iconEmail"></div>
+				<p>abi-team@first-privacy.com</p>      			
+      		</div>
+      	</div>
+
+      	
+
       </div>
-    </div>
 		
-		<div class="shadowRoot">
+		<div class="shadowRoot"> <!-- Место для всплывашек, того что изначально не видно на сайте -->
+			<div id="up"></div>
 			<div id="ageCheck"></div>
-		</div> <!-- Место для всплывашек, того что изначально не видно на сайте -->
+
+		</div> 
 	</body>
 </html>
