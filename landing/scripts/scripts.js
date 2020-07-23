@@ -33,7 +33,7 @@ function createPopup(){
     });
 
     $('.buttonYes').on('click', function(){
-        localStorage.setItem('age', 'Yes');
+        localStorage.setItem('ageControl', 'Yes');
     });
 };
 
@@ -121,20 +121,23 @@ function logIn(){
     let pass = $('#password').val();
 
     localStorage.setItem(login, pass);
-    console.log(localStorage.getItem(login))
+    console.log(localStorage.getItem(login));
 
     let keys = Object.keys(localStorage);
     for(let key of keys) {
     console.log(`${key}: ${localStorage.getItem(key)}`);
     }
     $('#answer').html('В локалсторедж записал логин - '+login+' и пароль - '+pass);
+
+    $('.logo-title').html('Hello ' + login);
+
 };
 //Авторизация - конец
 //Всплывающий футер
 function scrollFooter(){
 
     $(window).scroll(function(){
-        if ($(window).scrollTop() > 3550){
+        if ($(window).scrollTop() > 3950){
             $('.footer').addClass('active');
         }else{
             $('.footer').removeClass('active');
@@ -152,18 +155,20 @@ function scrollFooter(){
 //   document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
 // });
 
+let user = '';
+
 $(function(){
     scrollFooter();
     upTop();
     href();
 
     //Защита от детей
-    if (localStorage.getItem('age')){
+    // localStorage.removeItem('ageControl'); Запустить попап еще раз\очистка локалсторедж
+    if (localStorage.getItem('ageControl')){
         console.log('Welcome');
     }else{
        createPopup(); 
     }
-
 
 
 });

@@ -10,19 +10,17 @@
 	<div class="header">
 			<div class="sideBar">
 				<div id="menuLinks" class="menu">
+					<button class="closeMenu">Закрыть меню</button>	
 					<a href="">Главная</a>
 					<a id="exam" href="./landing/landing.html" target="_blank">ЭКЗАМЕН</a>
 				</div>
-					<div class="avatar">
-						<a href="">avatar</a>
-					</div>	
 			</div>	
 
+	</div>
 				<div class="downmenu">
 					<button onclick="toggleSidebar()">Меню сайта</button>
 					<button><a>Добавить</a></button>
 				</div>
-	</div>
 
 
 			
@@ -89,6 +87,7 @@
 									<input id="rate_acc" type="number" placeholder="Сколько стоит сироп?"><br>
 									<input type="submit" value="Рассчитать" onclick="SummaTell()"> 
 								</div>
+									<p id="quantity">Количество = </p>
 									<p id="Telephone">Общая сумма покупки = </p>
 									<input type="submit" value="Удаление результата" onclick="delRezultTelepphone()">					
 							</div>

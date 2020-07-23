@@ -356,6 +356,8 @@ let rate_acc = $('#rate_acc').val();
 rate_tel = Number(rate_tel);
 rate_acc = Number(rate_acc);
 
+let quantity = 0;
+
 let SumMyPorchases = 0;
 let	SumTel = 0;
 let SumAcc = 0;
@@ -370,10 +372,11 @@ let SumAcc = 0;
 					console.log ('Yes, buy!');
 				SumMyPorchases = SumMyPorchases + SumTel;
 			    	console.log (SumMyPorchases, 'Сумма покупки');
-			
+			   			
 			if ((SumMyPorchases + SumAcc) < bank_balans){
 				SumMyPorchases = SumMyPorchases + SumAcc;
 					console.log (SumMyPorchases, 'Можно добавить акк');
+					quantity++;
 			}else{
 				console.log (SumMyPorchases, 'На акк не хватило');
 			}
@@ -383,13 +386,18 @@ let SumAcc = 0;
 				console.log (SumMyPorchases, 'No balans');
 			};	
 
+	$('#quantity').html('Количество = ' + quantity);
+
 	$('#Telephone').html('Общая сумма покупки = ' + SumMyPorchases.toFixed(2));
 
 };
 
 function delRezultTelepphone(){
-	$('#Telephone').empty()
-	$('#Telephone').html('Общая сумма покупки = ')
+	$('#quantity').empty();
+	$('#quantity').html('Количество = ');
+
+	$('#Telephone').empty();
+	$('#Telephone').html('Общая сумма покупки = ');
 }
 
 //Переключатель картинок ??
@@ -417,6 +425,9 @@ function addImage(){
 function toggleSidebar() { 
 	let f = $('.sideBar').toggleClass('open');
 }	
+
+
+
 
 // onmouseenter="toggleImage(this, true)" onmouseleave="toggleImage(this)"
 // function toggleImage(el, act){
@@ -470,6 +481,9 @@ $(function(){
 	snoudenStyle()
 	});
 
+	$('.closeMenu').on('click', function(){
+        $('.sideBar').removeClass('open');
+    });
 
 	createCardBoxes();
 
